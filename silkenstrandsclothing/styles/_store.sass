@@ -1,0 +1,84 @@
+
+.woocommerce-breadcrumb
+   display: none
+
+.content-area
+   background-image: url('../images/watercolor/light-blue-watercolor.jpg')
+   background-size: cover
+   background-position: bottom
+   background-repeat: no-repeat
+
+   ul.products,
+   li.product
+      background-color: #fff !important
+   
+.woocommerce.post-type-archive-product   
+   main
+      padding: 50px
+      @media (max-width: 500px)
+         padding: 30px
+      @media (max-width: 400px)
+         padding: 15px
+
+            
+      .page-title,
+      .product
+         text-align: center
+
+      .woocommerce-result-count
+      .woocommerce-result-count
+         width: 50%
+         text-align: right
+         padding-right: 15px
+      .woocommerce-ordering
+         width: 50%
+         padding-left: 15px
+
+      .woocommerce-notices-wrapper
+         display: none
+
+      .woo-commerce-result-count,
+      .woocommerce-ordering,
+      select
+         font-family: 'Montserrat', sans-serif
+
+      ul.products,
+      .woocommerce-notices-wrapper
+         background-color: white
+         max-width: 1200px
+         margin: 0 auto
+         padding: 40px
+
+      ul.products
+         padding: 0 25px
+         box-shadow: 0 0 20px #fff
+
+         li.product
+            .woocommerce-loop-product__title
+               font-family: 'Cormorant', serif !important
+               font-size: 1.5em
+               text-align: center
+               @media (max-width:700px)
+                  font-size: 40px
+               @media (max-width:600px)
+                  font-size: 30px
+               @media (max-width:440px)
+                  padding: 15px
+
+            .amount
+               font-size: 1.5em
+               line-height: 1.2
+               @media (max-width: 1200px)
+                  font-size: 90px
+               @media (max-width: 700px)
+                  font-size: 75px
+               @media (max-width: 600px)
+                  font-size: 65px
+               @media (max-width: 550px)
+                  font-size: 50px
+
+            .button
+               @extend .button-clear
+      
+   #sidebar
+      display: none
