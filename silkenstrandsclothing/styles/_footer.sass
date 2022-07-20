@@ -1,14 +1,16 @@
 footer
    background-color: #222
+   // margin-top: 50px
    padding:  50px
    text-align: center
    @media (max-width: 1200px)
       padding: 75px 20px 40px
 
    a
-      color: $pastelGreen
+      color: $links
       &:hover
-         filter: brightness(75%)
+         color: darken($links, 15%)
+         // filter: brightness(75%)
 
 
    .top

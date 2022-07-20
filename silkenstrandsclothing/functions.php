@@ -71,7 +71,8 @@ if( function_exists('acf_add_options_page') ) {
     function silkenstrands_nav_menus() {
       register_nav_menus( array( 
         'header' => 'Header menu', 
-        'footer' => 'Footer menu' 
+        'footer' => 'Footer menu',
+        'account' => 'Account menu'
       ) );
      }
     
@@ -89,38 +90,98 @@ if( function_exists('acf_add_options_page') ) {
    // WooCommerce Setup
    function add_woocommerce_support() {
       add_theme_support( 'woocommerce' );
-      add_theme_support( 'wc-product-gallery-zoom' );
+      // add_theme_support( 'wc-product-gallery-zoom' );
       add_theme_support( 'wc-product-gallery-lightbox' );
       add_theme_support( 'wc-product-gallery-slider' );
   }
   
   add_action( 'after_setup_theme', 'add_woocommerce_support' );
 
+  function remove_image_zoom_support() {
+    remove_theme_support( 'wc-product-gallery-zoom' );
+}
+add_action( 'wp', 'remove_image_zoom_support', 100 );
+
 
 
   // Product Image Flip
-  function add_on_hover_shop_loop_image() {
-    $image_id = wc_get_product()->get_gallery_image_ids()[1] ; 
-    if ( $image_id ) {
-      echo wp_get_attachment_image( $image_id )['300x450'] ;
-    } else {  //assuming not all products have galleries set
-      echo wp_get_attachment_image( wc_get_product()->get_image_id() ) ; 
-    }
-  }
+  // function add_on_hover_shop_loop_image() {
+  //   $image_id = wc_get_product()->get_gallery_image_ids()[1] ; 
+  //   if ( $image_id ) {
+  //     echo wp_get_attachment_image( $image_id );
+  //   } else {  
+  //     echo wp_get_attachment_image( wc_get_product()->get_image_id() ) ; 
+  //   }
+  // }
   // add_action( 'woocommerce_before_shop_loop_item_title', 'add_on_hover_shop_loop_image' ) ; 
 
 
-// To change add to cart text on single product page
-// add_filter( 'woocommerce_product_single_add_to_cart_text', 'woocommerce_custom_single_add_to_cart_text' ); 
-// function woocommerce_custom_single_add_to_cart_text() {
-//     return __( 'Buy Now', 'woocommerce' ); 
-// }
 
-// To change add to cart text on product archives(Collection) page
-// add_filter( 'woocommerce_product_add_to_cart_text', 'woocommerce_custom_product_add_to_cart_text' );  
-// function woocommerce_custom_product_add_to_cart_text() {
-//     return __( 'Buy Now', 'woocommerce' );
-// }
 
+  // Rename My Account if not logged in
+  add_filter( 'wp_nav_menu_items', 'ssc_dynamic_menu_item_label', 9999, 2 ); 
+  
+  function ssc_dynamic_menu_item_label( $items, $args ) { 
+    if ( ! is_user_logged_in() ) { 
+        $items = str_replace( "My Account", "Login", $items ); 
+    } 
+    return $items; 
+  } 
+
+
+
+
+  // Merge Address Info to Account Details section
+ 
+  add_filter( 'woocommerce_account_menu_items', 'ssc_remove_address_my_account', 999 );
+  
+  function ssc_remove_address_my_account( $items ) {
+    unset( $items['edit-address'] );
+    return $items;
+  }
+  
+  // 2. Second, print the ex tab content (woocommerce_account_edit_address) into an existing tab (woocommerce_account_edit-account_endpoint). See notes below!
+  
+  add_action( 'woocommerce_account_edit-account_endpoint', 'woocommerce_account_edit_address' );
+
+
+  
+
+  // Remove Logout confirmation
+  add_action('check_admin_referer', 'logout_without_confirm', 10, 2);
+
+   function logout_without_confirm($action, $result) {
+
+      if ($action == "log-out" && !isset($_GET['_wpnonce'])) {
+
+      $redirect_to = isset($_REQUEST['redirect_to']) ?
+
+      $_REQUEST['redirect_to'] : '';
+
+      $location = str_replace('&amp;', '&', wp_logout_url($redirect_to));
+
+      header("Location: $location");
+
+      die();
+
+    }
+  }
+
+
+
+
+  // Remove Country field from WooCommerce checkout
+  function custom_override_checkout_fields( $fields )    
+    {
+    unset($fields['billing']['billing_country']);
+    return $fields;
+    }
+    add_filter('woocommerce_checkout_fields','custom_override_checkout_fields');
+
+
+
+// Shortcodes
+
+include('custom-shortcodes.php')
 
 ?>

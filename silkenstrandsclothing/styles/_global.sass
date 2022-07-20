@@ -1,8 +1,12 @@
 body
    overflow-x: hidden
+   background-image: url('../images/watercolor/watercolor3-faded.jpg')
+   background-position: center
+   background-repeat: no-repeat
+   background-size: cover
    
 main
-   padding-top: 50px
+   padding: 20px 0 50px
    position: relative
 
 h1,h2,h3,h4,h5,h6,p,li,span 
@@ -11,6 +15,7 @@ h1,h2,h3,h4,h5,h6,p,li,span
 h1
    font-family: 'Snell', cursive
    font-weight: 400
+   font-size: 100px
 
 h2,
 h3,
@@ -21,14 +26,11 @@ h5,
 h6
    font-family: 'Montserrat', sans-serif
 
-h1
-   font-size: 100px
-
 h2
-   font-size: 60px
+   font-size: 40px
    font-weight: 300
    @media (max-width: 550px)
-      font-size: 45px
+      font-size: 35px
 
 h3
    font-size: 30px
@@ -43,14 +45,21 @@ h5
       font-size: 19px
 
 p,
-td
-   font-family: 'Lato', sans-serif
+td,
+th,
+address
+   font-family: 'SourceSansPro', sans-serif
    font-size: 17px
    @media (max-width: 1300px)
       font-size: 16px
 
 a
+   color: $links
+   font-family: 'Montserrat', sans-serif
+   // font-weight: bold
    text-decoration: none
+   &:hover
+      color: darken($links, 15%)
 
 ul
    margin: 0
@@ -63,9 +72,31 @@ ul
       max-width: 85%
    @media (max-width: 1350px)
       max-width: 90%
-   // @media (max-width: 500px)
-   //    max-width: 100%
 
-.page-title
-   text-align: center
 
+.page
+   .page-title
+      font-size: 80px
+      padding-top: 30px
+      text-align: center
+
+   main
+      padding: 50px 0
+   main.home-content
+      padding: 20px 0 50px
+
+   .blue
+      color: $blue
+   .green
+      color: $green
+   .pink
+      color: $pink
+
+mark
+   background-color: none !important
+
+table
+   background-color: rgba(255,255,255,.6) !important
+
+address
+   text-align: center !important

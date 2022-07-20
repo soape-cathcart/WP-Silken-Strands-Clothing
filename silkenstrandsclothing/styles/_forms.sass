@@ -1,0 +1,50 @@
+.wpforms-container
+   form.wpforms-form
+      input
+         border: 1px solid $green !important
+         border-radius: 5px !important
+         padding: 5px 8px
+
+      .wpforms-field-label,
+      .wpforms-field-sublabel,
+      legend
+         font-family: 'Montserrat', sans-serif
+         font-size: 16px !important
+         font-weight: 700 !important
+
+      .wpforms-submit
+         @extend .button
+         background-color: transparent !important
+         border: 1px solid #222 !important
+         font-weight: bold
+         &:hover
+            background-color: #222 !important
+            color: #eee
+
+   .wpforms-submit-container
+      margin-top: 30px !important
+      text-align: center
+
+.woocommerce form .form-row input.input-text,
+.woocommerce form .form-row textarea
+   border: 1px solid $green !important
+   border-radius: 5px !important
+   padding: 5px 8px
+
+.woocommerce form .form-row
+   text-align: left
+
+.woocommerce form .form-row label
+   font-weight: 700
+
+.woocommerce fieldset
+   border: none
+   margin-top: 25px
+   padding: 0
+
+   legend
+      display: none
+      font-family: 'Montserrat', sans-serif
+      font-size: 16px
+      font-weight: 700
+      margin-bottom: 15px

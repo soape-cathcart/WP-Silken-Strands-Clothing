@@ -37,16 +37,11 @@
 				'item_spacing'         => 'preserve',
 				'depth'                => 0,
 				'walker'               => '',
-				'theme_location'       => 'header',
+				'theme_location'       => 'footer',
 			);
 			wp_nav_menu($args = $menu_args);
 		?>
          </nav>
-         <!-- <ul class="nav-links">
-            <li><a href="./">HOME</a></li>
-            <li><a href="./store.html">STORE</a></li>
-            <li><a href="./store.html#!/~/cart">CART</a></li>
-         </ul> -->
       </div>
 
       <div class="right">

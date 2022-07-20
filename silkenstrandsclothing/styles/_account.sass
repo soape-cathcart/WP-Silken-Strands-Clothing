@@ -1,0 +1,146 @@
+.woocommerce-account
+   .woocommerce-form-login
+      background-color: rgba(255,255,255,.7)
+      max-width: 500px
+      margin: 0 auto 50px !important
+
+      .lost_password a
+         color: $links
+
+         &:hover
+            color: darken($links, 15%)
+
+      .woocommerce-Input
+         border: 1px solid $green
+         border-radius: 5px
+
+      .form-row
+         margin-top: 20px
+
+      .woocommerce-form-login__submit
+         background-color: transparent
+         border: 1px solid #222 !important
+         &:hover
+            background-color: #333
+            color: #eee
+
+   h2
+      text-align: center
+
+   .myaccount-dashboard
+      display: flex
+      flex-direction: row
+      flex-wrap: nowrap
+      justify-content: center
+      margin: 30px auto
+      padding: 30px 50px
+
+      ul.dash-links
+         list-style-type: none
+         display: flex
+         flex-direction: row
+         flex-wrap: nowrap
+
+         li
+            border-radius: 10px
+            margin: 0 15px
+            text-align: center
+
+            a
+               display: block
+               height: 100%
+               padding: 20px
+               width: 100%
+
+               img
+                  margin: 0 auto 15px
+
+         li.orders
+            border: 1px solid $blue
+            a:hover
+               background-color: transparentize($blue, .8)
+            img
+               width: 100px
+
+         li.account-details
+            border: 1px solid $green
+            a:hover
+               background-color: transparentize($green, .8)
+            img
+               width: 120px
+
+         li.logout
+            border: 1px solid $pink
+            a:hover
+               background-color: transparentize($pink, .8)
+            img
+               width: 100px
+
+   // p
+   //    text-align: center
+   
+.woocommerce-account
+   .woocommerce-MyAccount-content
+      float: none !important
+      width: 100% !important
+
+      h3
+         text-align: center
+
+      form
+         max-width: 600px
+         margin: 0 auto
+         margin-bottom: 35px
+
+         button[type=submit]
+            margin-top: 20px
+            margin-bottom: 30px
+
+.woocommerce-MyAccount-navigation
+   ul
+      display: none
+      list-style-type: none
+
+.woocommerce-addresses
+   margin-bottom: 50px
+
+   .woocommerce-Address
+      address
+         text-align: center !important
+
+.woocommerce .col2-set .col-1, .woocommerce .col2-set .col-2, .woocommerce-page .col2-set .col-1, .woocommerce-page .col2-set .col-2
+   @media (max-width: 768px)
+      margin-top: 32px
+
+
+// .woocommerce-orders,
+.woocommerce-edit-address,
+.woocommerce-edit-account
+   p
+      text-align: center
+   form
+      margin-top: 30px
+
+
+.woocommerce table.shop_table
+   background-color: rgba(255,255,255,.6)
+
+.woocommerce-Address-title
+   padding: 15px
+   position: relative
+
+   h3
+      float: none !important
+      text-align: center
+
+   a.edit
+      position: absolute
+      top: 15px
+      right: 15px
+
+// WooCommerce Info
+
+.woocommerce-info
+   border-top-color: $brightGreen
+   background-color: #444
+   color: white

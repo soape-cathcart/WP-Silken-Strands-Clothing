@@ -8,7 +8,7 @@ while(have_posts()) {
 
 ?>
 
-<main class="home">
+<main class="home-content">
       <section class="slider-section hero-section" data-bg="<?php echo get_template_directory_uri(); ?>/images/watercolor/watercolor.jpg" data-effect="slide-right">
          <div class="left">
             <div class="slider">
@@ -40,7 +40,7 @@ while(have_posts()) {
 							echo '<p>Find your style with Silken Strands clothing</p>';
 						} ?>
 					</div>
-               <p class="cta"><a href="/shop" class="button button-clear"><?php if (get_field('button_text')) {
+               <p class="cta"><a href="/shop" class="button"><?php if (get_field('button_text')) {
 						the_field('button_text');
 						} else {
 							echo 'START SHOPPING';
@@ -104,7 +104,7 @@ while(have_posts()) {
 									echo 'We hope you find your style with <em>Silken Strands</em> clothing.';
 								} ?>
 							</p>
-							<a href="/shop" class="button button-clear"><?php if (get_field('button_text2')) {
+							<a href="/shop" class="button"><?php if (get_field('button_text2')) {
 									the_field('button_text2');
 								} else {
 									echo 'SHOP';
@@ -163,7 +163,7 @@ while(have_posts()) {
 			<h2 class="instagram-title"><?php if (get_field('instagram_title')) {
 				the_field('instagram_title');
 				} else {
-					echo 'Our Catalog';
+					echo 'Follow Us on Instagram';
 				} ?>
 			</h2>
 
