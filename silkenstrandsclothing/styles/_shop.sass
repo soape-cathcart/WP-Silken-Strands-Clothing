@@ -1,0 +1,132 @@
+
+.woocommerce-breadcrumb
+   display: none
+
+.content-area
+   // background-image: url('../images/light-blue-watercolor.jpg')
+   // background-size: cover
+   // background-repeat: no-repeat
+   // background-color: #d2f4ff
+
+   ul.products,
+   li.product
+      background-color: #fff !important
+   
+.woocommerce.post-type-archive-product   
+   // background-image: none
+   
+
+   main
+      padding: 50px
+      @media (max-width: 500px)
+         padding: 30px
+      @media (max-width: 400px)
+         padding: 15px
+
+      .page-title
+         margin-bottom: 32px
+
+      .page-title,
+      .product
+         text-align: center
+
+      .woocommerce-result-count
+         font-family: 'Montserrat', sans-serif
+         font-weight: bold
+         width: 50%
+         text-align: right
+         padding: 5px
+         padding-right: 15px
+      .woocommerce-ordering
+         padding-left: 15px
+         width: 50%
+
+         select
+            border: 1px solid #177512 !important
+            border-radius: 5px !important
+            cursor: pointer
+            padding: 5px 8px
+
+      .woocommerce-notices-wrapper
+         display: none
+
+      .woo-commerce-result-count,
+      .woocommerce-ordering,
+      select
+         font-family: 'Montserrat', sans-serif
+
+      ul.products,
+      .woocommerce-notices-wrapper
+         background-color: white
+         max-width: 1200px
+         margin: 0 auto
+         padding: 40px
+
+      ul.products
+         padding: 0
+         box-shadow: 0 0 20px #fff
+
+         li.product
+            box-shadow: 0 1px 2px rgba(0,0,0,0.15)
+            padding: 10px
+            // opacity: 0
+            // overflow: hidden
+            // transform: translateX(20px)
+            transition: all .2s
+            &:hover
+               box-shadow: 2px 2px 15px
+
+            a
+               background-color: rgba(255,255,255,0.28)
+               margin-left: -12px
+               padding: 16px
+            
+            .woocommerce-loop-product__title
+               font-family: 'Cormorant', serif !important
+               font-size: 28px !important
+               text-align: center
+               @media (max-width:700px)
+                  font-size: 40px
+               @media (max-width:600px)
+                  font-size: 30px
+               @media (max-width:440px)
+                  padding: 15px
+
+            .amount
+               font-size: 17px !important
+               line-height: 1.2
+               @media (max-width: 1200px)
+                  font-size: 90px
+               @media (max-width: 700px)
+                  font-size: 75px
+               @media (max-width: 600px)
+                  font-size: 65px
+               @media (max-width: 550px)
+                  font-size: 50px
+
+            .button
+               @extend .button
+               background-color: rgba(175, 242, 255, .30) !important
+      
+#sidebar,
+.product_meta
+   display: none
+
+
+// Hover Image styling
+
+// .woocommerce ul.products li.product a img  
+//     height: 150px
+//     width: 150px
+//     object-fit: cover
+//     padding: 0
+//     margin: 0 auto
+
+// .woocommerce ul.products li.product a img:nth-of-type(2) 
+//     display: none
+
+// .woocommerce ul.products li.product a:hover img:nth-of-type(2) 
+//     display: block
+
+// .woocommerce ul.products li.product a:hover img:nth-of-type(1) 
+//     display: none

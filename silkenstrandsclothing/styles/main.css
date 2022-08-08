@@ -9,6 +9,11 @@
 }
 
 @font-face {
+  font-family: 'SourceSansPro';
+  src: url(../fonts/SourceSansPro.ttf);
+}
+
+@font-face {
   font-family: 'Cormorant';
   src: url(../fonts/Cormorant.ttf);
 }
@@ -19,12 +24,56 @@
 }
 
 @font-face {
-  font-family: 'SourceSansPro';
-  src: url(../fonts/SourceSansPro.ttf);
+  font-family: 'Chonburi';
+  src: url(../fonts/Chonburi.ttf);
+}
+
+@font-face {
+  font-family: '20DB';
+  src: url(../fonts/20db.otf);
+}
+
+@font-face {
+  font-family: 'Designer';
+  src: url(../fonts/Designer.ttf);
+}
+
+@font-face {
+  font-family: 'Javelin';
+  src: url(../fonts/Javelin.otf);
+}
+
+@font-face {
+  font-family: 'Jordan';
+  src: url(../fonts/Jordan.otf);
+}
+
+@font-face {
+  font-family: 'Esthetique';
+  src: url(../fonts/esthetique.otf);
+}
+
+@font-face {
+  font-family: 'Nostalgia';
+  src: url(../fonts/Nostalgia.otf);
+}
+
+@font-face {
+  font-family: 'Asthetik';
+  src: url(../fonts/Asthetik.ttf);
+}
+
+@font-face {
+  font-family: 'Goldoni';
+  src: url(../fonts/Goldoni.otf);
+}
+
+html {
+  overflow-x: hidden;
 }
 
 body {
-  overflow-x: hidden;
+  overflow-x: hidden !important;
   background-image: url("../images/watercolor/watercolor3-faded.jpg");
   background-position: center;
   background-repeat: no-repeat;
@@ -46,7 +95,10 @@ h1 {
   font-size: 100px;
 }
 
-h2,
+h2 {
+  font-family: 'Goldoni';
+}
+
 h3,
 h4 {
   font-family: 'Cormorant', sans-serif;
@@ -108,13 +160,13 @@ address {
 }
 
 a {
-  color: #1e9b17;
+  color: #7aebf0;
   font-family: 'Montserrat', sans-serif;
   text-decoration: none;
 }
 
 a:hover {
-  color: #11580d;
+  color: #35e1e8;
 }
 
 ul {
@@ -146,11 +198,7 @@ ul {
 }
 
 .page main {
-  padding: 50px 0;
-}
-
-.page main.home-content {
-  padding: 20px 0 50px;
+  padding: 100px 0;
 }
 
 .page .blue {
@@ -177,16 +225,20 @@ address {
   text-align: center !important;
 }
 
-.button, .sbi_load_btn, .woocommerce.post-type-archive-product main ul.products li.product .button, .wpforms-container form.wpforms-form .wpforms-submit {
-  background: rgba(255, 255, 255, 0.3) !important;
-  border: 2px solid #3d493e !important;
+.menu-item a img, img.menu-image-title-after {
+  vertical-align: bottom !important;
+}
+
+.button, .woocommerce.post-type-archive-product main ul.products li.product .button, .wpforms-container form.wpforms-form .wpforms-submit {
+  background-color: #444 !important;
+  border: 2px solid #444 !important;
   -webkit-clip-path: polygon(10% 0%, 90% 0%, 100% 10%, 100% 90%, 90% 100%, 10% 100%, 0% 90%, 0% 10%);
           clip-path: polygon(10% 0%, 90% 0%, 100% 10%, 100% 90%, 90% 100%, 10% 100%, 0% 90%, 0% 10%);
-  color: #222 !important;
+  color: white !important;
   display: inline-block;
   font-family: 'Montserrat', sans-serif;
   font-size: 20px;
-  font-weight: 400;
+  font-weight: bold;
   letter-spacing: 2px;
   word-spacing: 3px;
   padding: 15px 25px;
@@ -194,24 +246,77 @@ address {
   transition: all .25s ease-in;
 }
 
-.button:hover, .sbi_load_btn:hover, .woocommerce.post-type-archive-product main ul.products li.product .button:hover, .wpforms-container form.wpforms-form .wpforms-submit:hover {
-  background-color: #3d493e !important;
-  -webkit-clip-path: polygon(10% 0%, 90% 0%, 100% 10%, 100% 90%, 90% 100%, 10% 100%, 0% 90%, 0% 10%);
-          clip-path: polygon(10% 0%, 90% 0%, 100% 10%, 100% 90%, 90% 100%, 10% 100%, 0% 90%, 0% 10%);
-  color: #eee !important;
+.button:hover, .woocommerce.post-type-archive-product main ul.products li.product .button:hover, .wpforms-container form.wpforms-form .wpforms-submit:hover {
+  background-color: #eaeaeacc !important;
 }
 
 @media (max-width: 1075px) {
-  .button, .sbi_load_btn, .woocommerce.post-type-archive-product main ul.products li.product .button, .wpforms-container form.wpforms-form .wpforms-submit {
+  .button, .woocommerce.post-type-archive-product main ul.products li.product .button, .wpforms-container form.wpforms-form .wpforms-submit {
     font-size: 18px;
     padding: 10px 20px;
   }
 }
 
 @media (max-width: 460px) {
-  .button, .sbi_load_btn, .woocommerce.post-type-archive-product main ul.products li.product .button, .wpforms-container form.wpforms-form .wpforms-submit {
-    font-size: 16px;
+  .button, .woocommerce.post-type-archive-product main ul.products li.product .button, .wpforms-container form.wpforms-form .wpforms-submit {
+    font-size: 15px;
+    padding: 8px 16px;
   }
+}
+
+.button.home, .sbi_load_btn, .woocommerce.post-type-archive-product main ul.products li.product .home.button, .woocommerce.post-type-archive-product main ul.products li.product .sbi_load_btn, .wpforms-container form.wpforms-form .home.wpforms-submit {
+  background-color: #444 !important;
+  border-color: #444 !important;
+  color: white !important;
+}
+
+.button.home:hover, .sbi_load_btn:hover, .woocommerce.post-type-archive-product main ul.products li.product .home.button:hover, .woocommerce.post-type-archive-product main ul.products li.product .sbi_load_btn:hover, .wpforms-container form.wpforms-form .home.wpforms-submit:hover {
+  background-color: #eee !important;
+  color: black !important;
+}
+
+@media (max-width: 905px) {
+  .button.home, .sbi_load_btn, .woocommerce.post-type-archive-product main ul.products li.product .home.button, .woocommerce.post-type-archive-product main ul.products li.product .sbi_load_btn, .wpforms-container form.wpforms-form .home.wpforms-submit {
+    background-color: #eee !important;
+    color: black !important;
+  }
+}
+
+.button.blue, .woocommerce.post-type-archive-product main ul.products li.product .blue.button, .wpforms-container form.wpforms-form .blue.wpforms-submit {
+  background-color: #7aebf0 !important;
+  border-color: #7bc4bb !important;
+}
+
+.button.blue:hover, .woocommerce.post-type-archive-product main ul.products li.product .blue.button:hover, .wpforms-container form.wpforms-form .blue.wpforms-submit:hover {
+  background-color: #7bc4bb !important;
+}
+
+.button.green, .woocommerce.post-type-archive-product main ul.products li.product .green.button, .wpforms-container form.wpforms-form .green.wpforms-submit {
+  background-color: #dfffef !important;
+  border-color: #9cffcd !important;
+}
+
+.button.green:hover, .woocommerce.post-type-archive-product main ul.products li.product .green.button:hover, .wpforms-container form.wpforms-form .green.wpforms-submit:hover {
+  background-color: #9cffcd !important;
+}
+
+.sbi_load_btn {
+  border: 2px solid #444 !important;
+  -webkit-clip-path: polygon(10% 0%, 90% 0%, 100% 10%, 100% 90%, 90% 100%, 10% 100%, 0% 90%, 0% 10%);
+          clip-path: polygon(10% 0%, 90% 0%, 100% 10%, 100% 90%, 90% 100%, 10% 100%, 0% 90%, 0% 10%);
+}
+
+.sbi_load_btn span {
+  color: white;
+  text-transform: uppercase;
+}
+
+.sbi_load_btn:hover {
+  color: #444;
+}
+
+.sbi_load_btn:hover span {
+  color: #444;
 }
 
 .sbi_load_btn .sbi_btn_text {
@@ -220,28 +325,83 @@ address {
 }
 
 .woocommerce-button,
-.woocommerce #respond input#submit, .woocommerce a.button, .woocommerce a.sbi_load_btn, .woocommerce.post-type-archive-product main ul.products li.product a.button, .woocommerce .wpforms-container form.wpforms-form a.wpforms-submit, .wpforms-container form.wpforms-form .woocommerce a.wpforms-submit, .woocommerce button.button, .woocommerce button.sbi_load_btn, .woocommerce.post-type-archive-product main ul.products li.product button.button, .woocommerce .wpforms-container form.wpforms-form button.wpforms-submit, .wpforms-container form.wpforms-form .woocommerce button.wpforms-submit, .woocommerce input.button, .woocommerce input.sbi_load_btn, .woocommerce.post-type-archive-product main ul.products li.product input.button, .woocommerce .wpforms-container form.wpforms-form input.wpforms-submit, .wpforms-container form.wpforms-form .woocommerce input.wpforms-submit {
-  background-color: rgba(255, 255, 255, 0.3) !important;
-  border: 1px solid #3d493e !important;
+.woocommerce #respond input#submit, .woocommerce a.button, .woocommerce.post-type-archive-product main ul.products li.product a.button, .woocommerce .wpforms-container form.wpforms-form a.wpforms-submit, .wpforms-container form.wpforms-form .woocommerce a.wpforms-submit, .woocommerce button.button, .woocommerce.post-type-archive-product main ul.products li.product button.button, .woocommerce .wpforms-container form.wpforms-form button.wpforms-submit, .wpforms-container form.wpforms-form .woocommerce button.wpforms-submit, .woocommerce input.button, .woocommerce.post-type-archive-product main ul.products li.product input.button, .woocommerce .wpforms-container form.wpforms-form input.wpforms-submit, .wpforms-container form.wpforms-form .woocommerce input.wpforms-submit {
+  background-color: #444 !important;
+  border: 2px solid #444 !important;
   font-weight: bold;
 }
 
 .woocommerce-button:hover,
-.woocommerce #respond input#submit:hover, .woocommerce a.button:hover, .woocommerce a.sbi_load_btn:hover, .woocommerce.post-type-archive-product main ul.products li.product a.button:hover, .woocommerce .wpforms-container form.wpforms-form a.wpforms-submit:hover, .wpforms-container form.wpforms-form .woocommerce a.wpforms-submit:hover, .woocommerce button.button:hover, .woocommerce button.sbi_load_btn:hover, .woocommerce.post-type-archive-product main ul.products li.product button.button:hover, .woocommerce .wpforms-container form.wpforms-form button.wpforms-submit:hover, .wpforms-container form.wpforms-form .woocommerce button.wpforms-submit:hover, .woocommerce input.button:hover, .woocommerce input.sbi_load_btn:hover, .woocommerce.post-type-archive-product main ul.products li.product input.button:hover, .woocommerce .wpforms-container form.wpforms-form input.wpforms-submit:hover, .wpforms-container form.wpforms-form .woocommerce input.wpforms-submit:hover {
-  background-color: #3d493e !important;
-  color: #eee;
+.woocommerce #respond input#submit:hover, .woocommerce a.button:hover, .woocommerce.post-type-archive-product main ul.products li.product a.button:hover, .woocommerce .wpforms-container form.wpforms-form a.wpforms-submit:hover, .wpforms-container form.wpforms-form .woocommerce a.wpforms-submit:hover, .woocommerce button.button:hover, .woocommerce.post-type-archive-product main ul.products li.product button.button:hover, .woocommerce .wpforms-container form.wpforms-form button.wpforms-submit:hover, .wpforms-container form.wpforms-form .woocommerce button.wpforms-submit:hover, .woocommerce input.button:hover, .woocommerce.post-type-archive-product main ul.products li.product input.button:hover, .woocommerce .wpforms-container form.wpforms-form input.wpforms-submit:hover, .wpforms-container form.wpforms-form .woocommerce input.wpforms-submit:hover {
+  background-color: #eee !important;
+  color: #444 !important;
 }
 
-.woocommerce table.my_account_orders .button, .woocommerce table.my_account_orders .sbi_load_btn, .woocommerce.post-type-archive-product table.my_account_orders main ul.products li.product .button, .woocommerce.post-type-archive-product main ul.products li.product table.my_account_orders .button, .woocommerce table.my_account_orders .wpforms-container form.wpforms-form .wpforms-submit, .wpforms-container form.wpforms-form .woocommerce table.my_account_orders .wpforms-submit {
+.woocommerce table.my_account_orders .button, .woocommerce.post-type-archive-product table.my_account_orders main ul.products li.product .button, .woocommerce.post-type-archive-product main ul.products li.product table.my_account_orders .button, .woocommerce table.my_account_orders .wpforms-container form.wpforms-form .wpforms-submit, .wpforms-container form.wpforms-form .woocommerce table.my_account_orders .wpforms-submit {
   margin-right: 15px;
 }
 
-.woocommerce.post-type-archive-product .button, .woocommerce.post-type-archive-product .sbi_load_btn, .woocommerce.post-type-archive-product main ul.products li.product .button, .woocommerce.post-type-archive-product .wpforms-container form.wpforms-form .wpforms-submit, .wpforms-container form.wpforms-form .woocommerce.post-type-archive-product .wpforms-submit {
+.woocommerce.post-type-archive-product .button, .woocommerce.post-type-archive-product main ul.products li.product .button, .woocommerce.post-type-archive-product .wpforms-container form.wpforms-form .wpforms-submit, .wpforms-container form.wpforms-form .woocommerce.post-type-archive-product .wpforms-submit {
   font-size: 16px;
 }
 
-.desktop-nav {
-  background-color: white;
+header {
+  position: fixed;
+  width: 100%;
+  z-index: 999;
+}
+
+header .logo {
+  position: absolute;
+  left: 32px;
+  top: -20px;
+}
+
+@media (max-width: 1100px) {
+  header .logo {
+    top: 0;
+  }
+}
+
+header .logo a {
+  color: #a5e0fc;
+  font-family: 'Snell', cursive;
+  font-size: 80px;
+  text-shadow: 1px 1px 3px white;
+}
+
+@media (max-width: 1200px) {
+  header .logo a {
+    font-size: 70px;
+  }
+}
+
+@media (max-width: 1100px) {
+  header .logo a {
+    font-size: 60px;
+  }
+}
+
+@media (max-width: 1000px) {
+  header .logo a {
+    text-shadow: none;
+  }
+}
+
+.banner-nav {
+  background-color: #dcf4ff;
+  top: 0;
+  right: 0;
+  width: 100%;
+}
+
+@media (max-width: 768px) {
+  .banner-nav {
+    display: none;
+  }
+}
+
+.banner-nav .banner-nav-links {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -249,14 +409,68 @@ address {
   -webkit-box-direction: normal;
       -ms-flex-direction: row;
           flex-direction: row;
-  -ms-flex-wrap: nowrap;
-      flex-wrap: nowrap;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+}
+
+.banner-nav .banner-nav-links li {
+  display: block;
+  height: 100%;
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  text-align: center;
+  width: 200px;
+}
+
+@media (max-width: 600px) {
+  .banner-nav .banner-nav-links li {
+    width: 50%;
+  }
+}
+
+.banner-nav .banner-nav-links li a {
+  -webkit-clip-path: polygon(100% 0, 100% 90%, 95% 100%, 5% 100%, 0 90%, 0 0);
+          clip-path: polygon(100% 0, 100% 90%, 95% 100%, 5% 100%, 0 90%, 0 0);
+  color: #444;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 16px;
+  font-weight: bold;
+  letter-spacing: 1px;
+  display: block;
+  height: 100%;
+  width: 100%;
+  padding: 8px 20px;
+}
+
+.banner-nav .banner-nav-links li a:hover {
+  background-color: #444;
+}
+
+.banner-nav .banner-nav-links li a:hover span {
+  color: #dcf4ff;
+}
+
+.banner-nav .banner-nav-links li a span {
+  color: #444;
+}
+
+.desktop-nav {
+  background-color: white;
+  -webkit-box-shadow: 0 5px 10px #ddd;
+          box-shadow: 0 5px 10px #ddd;
+  display: block;
   height: 50px;
-  position: fixed;
   -webkit-transition: all ease-in .25s;
   transition: all ease-in .25s;
   width: 100%;
-  z-index: 999;
+}
+
+@media (max-width: 768px) {
+  .desktop-nav {
+    display: none;
+  }
 }
 
 .desktop-nav:hover {
@@ -268,12 +482,6 @@ address {
   color: #eee;
 }
 
-.desktop-nav .home-logo {
-  position: absolute;
-  top: 0;
-  left: 0;
-}
-
 .desktop-nav .nav-links {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -282,9 +490,9 @@ address {
   -webkit-box-direction: normal;
       -ms-flex-direction: row;
           flex-direction: row;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
   margin: 0;
   padding: 0;
   width: 100%;
@@ -297,7 +505,14 @@ address {
   margin: 0;
   padding: 0;
   text-align: center;
-  width: 230px;
+  width: 200px;
+}
+
+@media (max-width: 1100px) {
+  .desktop-nav .nav-links li {
+    min-width: 150px;
+    width: auto;
+  }
 }
 
 .desktop-nav .nav-links li a {
@@ -317,8 +532,15 @@ address {
   width: 100%;
 }
 
+@media (max-width: 1200px) {
+  .desktop-nav .nav-links li a {
+    font-size: 18px;
+  }
+}
+
 .desktop-nav .nav-links li a:hover {
   background-color: #eee;
+  border-top: 4px solid #444;
   color: #444;
   padding-top: 30px;
 }
@@ -350,7 +572,7 @@ address {
 }
 
 .mobile-nav {
-  background-color: #aaa;
+  background-color: #444;
   display: none;
   height: 100vh;
   width: 300px;
@@ -408,16 +630,16 @@ address {
   text-transform: uppercase;
 }
 
-.mobile-nav.open-menu .nav-lnks {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -ms-flex-wrap: nowrap;
-      flex-wrap: nowrap;
+.mobile-nav .mobile-menu-close {
+  display: none;
+  position: absolute;
+  top: 16px;
+  right: 16px;
+  z-index: 15;
+}
+
+.mobile-nav .mobile-menu-close.showing {
+  display: block;
 }
 
 footer {
@@ -433,11 +655,11 @@ footer {
 }
 
 footer a {
-  color: #1e9b17;
+  color: #7aebf0;
 }
 
 footer a:hover {
-  color: #11580d;
+  color: #15b5bc;
 }
 
 footer .top {
@@ -673,6 +895,16 @@ body.home h2 {
   font-size: 60px;
 }
 
+@media (max-width: 500px) {
+  body.home h2 {
+    font-size: 42px;
+  }
+}
+
+body.home main {
+  padding-top: 80px !important;
+}
+
 body.home .hero-section {
   background-image: url("../images/watercolor/watercolor2.jpg");
   background-size: cover;
@@ -689,13 +921,8 @@ body.home .hero-section {
   position: relative;
 }
 
-@media (max-width: 905px) {
-  body.home .hero-section {
-    display: block;
-  }
-}
-
 body.home .hero-section .left {
+  position: relative;
   width: 50%;
 }
 
@@ -703,6 +930,15 @@ body.home .hero-section .left {
   body.home .hero-section .left {
     width: 100%;
   }
+}
+
+body.home .hero-section .left .overlay {
+  background-color: rgba(255, 255, 255, 0.3);
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
 }
 
 body.home .hero-section .right {
@@ -719,12 +955,7 @@ body.home .hero-section .right {
 
 @media (max-width: 905px) {
   body.home .hero-section .right {
-    background-color: rgba(0, 0, 0, 0.7);
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
+    background-color: #ffffffb3;
   }
 }
 
@@ -735,38 +966,15 @@ body.home .hero-section .right {
 }
 
 body.home .hero-section .right .hero-elements {
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-}
-
-@media (max-width: 905px) {
-  body.home .hero-section .right .hero-elements {
-    position: absolute;
-    top: 50px;
-    left: 50%;
-    -webkit-transform: translateX(-50%);
-            transform: translateX(-50%);
-    width: 90%;
-  }
-}
-
-@media (max-width: 905px) and (max-width: 500px) {
-  body.home .hero-section .right .hero-elements {
-    top: 25px;
-  }
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
 }
 
 body.home .hero-section .right .home-title,
 body.home .hero-section .right .tagline,
-body.home .hero-section .right .tagline2,
 body.home .hero-section .right .cta,
 body.home .hero-section .right .social {
   opacity: 0;
@@ -778,7 +986,6 @@ body.home .hero-section .right .social {
 
 body.home .hero-section .right .home-title.showing,
 body.home .hero-section .right .tagline.showing,
-body.home .hero-section .right .tagline2.showing,
 body.home .hero-section .right .cta.showing,
 body.home .hero-section .right .social.showing {
   opacity: 1;
@@ -786,194 +993,249 @@ body.home .hero-section .right .social.showing {
           transform: none;
 }
 
+body.home .hero-section .right .home-title,
+body.home .hero-section .right .tagline {
+  width: 100%;
+}
+
 body.home .hero-section .right .home-title {
-  font-size: 120px;
-  margin-top: 0;
+  color: #777;
+  font-size: 150px;
+  margin-top: 16px;
+  text-align: right;
 }
 
 @media (max-width: 1500px) {
   body.home .hero-section .right .home-title {
-    font-size: 100px;
+    font-size: 150px;
   }
 }
 
 @media (max-width: 1300px) {
   body.home .hero-section .right .home-title {
-    font-size: 80px;
+    font-size: 110px;
+  }
+}
+
+@media (max-width: 1250px) {
+  body.home .hero-section .right .home-title {
+    font-size: 95px;
   }
 }
 
 @media (max-width: 1000px) {
   body.home .hero-section .right .home-title {
-    font-size: 65px;
+    font-size: 85px;
   }
 }
 
 @media (max-width: 905px) {
   body.home .hero-section .right .home-title {
-    color: #eee;
+    color: #035379;
     font-size: 90px;
+    text-align: center;
+    text-shadow: 1px 1px 3px white;
   }
 }
 
-@media (max-width: 580px) {
+@media (max-width: 600px) {
   body.home .hero-section .right .home-title {
-    font-size: 70px;
+    font-size: 80px;
+    margin-top: 24px;
   }
 }
 
-@media (max-width: 440px) {
+@media (max-width: 500px) {
   body.home .hero-section .right .home-title {
     font-size: 60px;
   }
 }
 
-@media (max-width: 400px) {
+@media (max-width: 420px) {
   body.home .hero-section .right .home-title {
-    font-size: 50px;
+    margin-top: 48px;
   }
 }
 
 @media (max-width: 320px) {
   body.home .hero-section .right .home-title {
-    font-size: 40px;
+    font-size: 50px;
   }
 }
 
-body.home .hero-section .right .tagline,
-body.home .hero-section .right .tagline2 {
+body.home .hero-section .right .tagline {
   color: #444;
   font-family: 'Montserrat', sans-serif;
   font-size: 20px;
   line-height: 2;
+  margin-left: 3%;
+  margin-top: 40px;
+  text-align: left;
+  word-spacing: 2px;
 }
 
 @media (max-width: 1075px) {
-  body.home .hero-section .right .tagline,
-  body.home .hero-section .right .tagline2 {
+  body.home .hero-section .right .tagline {
     font-size: 17px;
   }
 }
 
 @media (max-width: 905px) {
-  body.home .hero-section .right .tagline,
-  body.home .hero-section .right .tagline2 {
-    color: #eee;
+  body.home .hero-section .right .tagline {
     font-size: 20px;
+    margin-left: 0;
+    text-align: center;
   }
 }
 
 @media (max-width: 600px) {
-  body.home .hero-section .right .tagline,
-  body.home .hero-section .right .tagline2 {
-    font-size: 18px;
-  }
-}
-
-@media (max-width: 450px) {
-  body.home .hero-section .right .tagline,
-  body.home .hero-section .right .tagline2 {
-    line-height: 1.5;
-  }
-}
-
-body.home .hero-section .right .tagline {
-  word-spacing: 2px;
-}
-
-@media (max-width: 500px) {
   body.home .hero-section .right .tagline {
+    font-size: 18px;
+    line-height: 1.5;
     word-spacing: 1px;
   }
 }
 
-@media (max-width: 440px) {
+@media (max-width: 420px) {
   body.home .hero-section .right .tagline {
     display: none;
   }
 }
 
-body.home .hero-section .right .tagline .star {
-  display: inline-block;
-  padding: 0 10px;
+body.home .hero-section .right .tagline .one,
+body.home .hero-section .right .tagline .two {
+  color: #aaa;
+  font-family: 'Goldoni';
+  font-size: 5em;
+  line-height: 0;
+  text-shadow: 1px 1px black;
+  width: 100%;
+  word-break: keep-all;
 }
 
-@media (max-width: 1000px) {
-  body.home .hero-section .right .tagline .star {
-    padding: 0 5px;
+@media (max-width: 1650px) {
+  body.home .hero-section .right .tagline .one,
+  body.home .hero-section .right .tagline .two {
+    font-size: 4.5em;
+  }
+}
+
+@media (max-width: 1400px) {
+  body.home .hero-section .right .tagline .one,
+  body.home .hero-section .right .tagline .two {
+    font-size: 4em;
+  }
+}
+
+@media (max-width: 1250px) {
+  body.home .hero-section .right .tagline .one,
+  body.home .hero-section .right .tagline .two {
+    font-size: 3.5em;
+  }
+}
+
+@media (max-width: 850px) {
+  body.home .hero-section .right .tagline .one,
+  body.home .hero-section .right .tagline .two {
+    font-size: 3em;
+  }
+}
+
+@media (max-width: 600px) {
+  body.home .hero-section .right .tagline .one,
+  body.home .hero-section .right .tagline .two {
+    font-size: 2.5em;
+  }
+}
+
+@media (max-width: 440px) {
+  body.home .hero-section .right .tagline .one,
+  body.home .hero-section .right .tagline .two {
+    font-size: 2em;
+  }
+}
+
+body.home .hero-section .right .tagline .one span,
+body.home .hero-section .right .tagline .two span {
+  color: #444;
+  text-shadow: 1px 1px #eee;
+}
+
+body.home .hero-section .right .tagline .one {
+  margin-top: 0;
+  opacity: .3;
+}
+
+body.home .hero-section .right .tagline .two {
+  margin-left: 8%;
+  opacity: .5;
+}
+
+@media (max-width: 1350px) {
+  body.home .hero-section .right .tagline .two {
+    margin-left: 5%;
   }
 }
 
 @media (max-width: 905px) {
-  body.home .hero-section .right .tagline .star {
-    color: #eee;
-  }
-}
-
-body.home .hero-section .right .tagline2 {
-  font-style: italic;
-}
-
-@media (max-width: 1300px) {
-  body.home .hero-section .right .tagline2 {
-    margin-bottom: 0;
-  }
-}
-
-@media (max-width: 1150px) {
-  body.home .hero-section .right .tagline2 {
-    margin-top: 0;
-  }
-}
-
-@media (max-width: 550px) {
-  body.home .hero-section .right .tagline2 {
-    display: none;
+  body.home .hero-section .right .tagline .two {
+    margin-left: 0;
   }
 }
 
 body.home .hero-section .right .cta {
   margin: 0;
   padding: 0;
-}
-
-body.home .hero-section .right .button, body.home .hero-section .right .sbi_load_btn, body.home .hero-section .right .woocommerce.post-type-archive-product main ul.products li.product .button, .woocommerce.post-type-archive-product main ul.products li.product body.home .hero-section .right .button, body.home .hero-section .right .wpforms-container form.wpforms-form .wpforms-submit, .wpforms-container form.wpforms-form body.home .hero-section .right .wpforms-submit {
-  margin-top: 25px;
-}
-
-@media (max-width: 1200px) {
-  body.home .hero-section .right .button, body.home .hero-section .right .sbi_load_btn, body.home .hero-section .right .woocommerce.post-type-archive-product main ul.products li.product .button, .woocommerce.post-type-archive-product main ul.products li.product body.home .hero-section .right .button, body.home .hero-section .right .wpforms-container form.wpforms-form .wpforms-submit, .wpforms-container form.wpforms-form body.home .hero-section .right .wpforms-submit {
-    margin-top: 50px;
-  }
+  position: absolute;
+  bottom: 15%;
+  right: 0;
+  width: 50%;
 }
 
 @media (max-width: 905px) {
-  body.home .hero-section .right .button, body.home .hero-section .right .sbi_load_btn, body.home .hero-section .right .woocommerce.post-type-archive-product main ul.products li.product .button, .woocommerce.post-type-archive-product main ul.products li.product body.home .hero-section .right .button, body.home .hero-section .right .wpforms-container form.wpforms-form .wpforms-submit, .wpforms-container form.wpforms-form body.home .hero-section .right .wpforms-submit {
-    border-color: #eee;
-    color: #eee;
+  body.home .hero-section .right .cta {
+    width: 100%;
   }
 }
 
 @media (max-width: 600px) {
-  body.home .hero-section .right .button, body.home .hero-section .right .sbi_load_btn, body.home .hero-section .right .woocommerce.post-type-archive-product main ul.products li.product .button, .woocommerce.post-type-archive-product main ul.products li.product body.home .hero-section .right .button, body.home .hero-section .right .wpforms-container form.wpforms-form .wpforms-submit, .wpforms-container form.wpforms-form body.home .hero-section .right .wpforms-submit {
+  body.home .hero-section .right .cta {
+    bottom: 10%;
+  }
+}
+
+@media (max-width: 420px) {
+  body.home .hero-section .right .cta {
+    bottom: 15%;
+  }
+}
+
+@media (max-width: 1200px) {
+  body.home .hero-section .right .button, body.home .hero-section .right .woocommerce.post-type-archive-product main ul.products li.product .button, .woocommerce.post-type-archive-product main ul.products li.product body.home .hero-section .right .button, body.home .hero-section .right .wpforms-container form.wpforms-form .wpforms-submit, .wpforms-container form.wpforms-form body.home .hero-section .right .wpforms-submit {
+    margin-top: 50px;
+  }
+}
+
+@media (max-width: 600px) {
+  body.home .hero-section .right .button, body.home .hero-section .right .woocommerce.post-type-archive-product main ul.products li.product .button, .woocommerce.post-type-archive-product main ul.products li.product body.home .hero-section .right .button, body.home .hero-section .right .wpforms-container form.wpforms-form .wpforms-submit, .wpforms-container form.wpforms-form body.home .hero-section .right .wpforms-submit {
     margin-top: 30px;
   }
 }
 
 @media (max-width: 450px) {
-  body.home .hero-section .right .button, body.home .hero-section .right .sbi_load_btn, body.home .hero-section .right .woocommerce.post-type-archive-product main ul.products li.product .button, .woocommerce.post-type-archive-product main ul.products li.product body.home .hero-section .right .button, body.home .hero-section .right .wpforms-container form.wpforms-form .wpforms-submit, .wpforms-container form.wpforms-form body.home .hero-section .right .wpforms-submit {
+  body.home .hero-section .right .button, body.home .hero-section .right .woocommerce.post-type-archive-product main ul.products li.product .button, .woocommerce.post-type-archive-product main ul.products li.product body.home .hero-section .right .button, body.home .hero-section .right .wpforms-container form.wpforms-form .wpforms-submit, .wpforms-container form.wpforms-form body.home .hero-section .right .wpforms-submit {
     margin-top: 80px;
   }
 }
 
 @media (max-width: 350px) {
-  body.home .hero-section .right .button, body.home .hero-section .right .sbi_load_btn, body.home .hero-section .right .woocommerce.post-type-archive-product main ul.products li.product .button, .woocommerce.post-type-archive-product main ul.products li.product body.home .hero-section .right .button, body.home .hero-section .right .wpforms-container form.wpforms-form .wpforms-submit, .wpforms-container form.wpforms-form body.home .hero-section .right .wpforms-submit {
+  body.home .hero-section .right .button, body.home .hero-section .right .woocommerce.post-type-archive-product main ul.products li.product .button, .woocommerce.post-type-archive-product main ul.products li.product body.home .hero-section .right .button, body.home .hero-section .right .wpforms-container form.wpforms-form .wpforms-submit, .wpforms-container form.wpforms-form body.home .hero-section .right .wpforms-submit {
     margin-top: 50px;
   }
 }
 
 @media (max-width: 325px) {
-  body.home .hero-section .right .button, body.home .hero-section .right .sbi_load_btn, body.home .hero-section .right .woocommerce.post-type-archive-product main ul.products li.product .button, .woocommerce.post-type-archive-product main ul.products li.product body.home .hero-section .right .button, body.home .hero-section .right .wpforms-container form.wpforms-form .wpforms-submit, .wpforms-container form.wpforms-form body.home .hero-section .right .wpforms-submit {
+  body.home .hero-section .right .button, body.home .hero-section .right .woocommerce.post-type-archive-product main ul.products li.product .button, .woocommerce.post-type-archive-product main ul.products li.product body.home .hero-section .right .button, body.home .hero-section .right .wpforms-container form.wpforms-form .wpforms-submit, .wpforms-container form.wpforms-form body.home .hero-section .right .wpforms-submit {
     margin-top: 30px;
   }
 }
@@ -982,9 +1244,15 @@ body.home .hero-section .right .social {
   margin-top: 35px;
 }
 
-@media (max-width: 1400px) {
+@media (max-width: 600px) {
   body.home .hero-section .right .social {
-    margin-top: 45px;
+    margin-top: 16px;
+  }
+}
+
+@media (max-width: 420px) {
+  body.home .hero-section .right .social {
+    margin-top: 32px;
   }
 }
 
@@ -1002,30 +1270,67 @@ body.home .hero-section .right .social a svg {
   transition: all .25s;
 }
 
-@media (max-width: 905px) {
-  body.home .hero-section .right .social a svg {
-    fill: #eee;
-  }
-}
-
 body.home .hero-section .right .social a:hover svg {
   opacity: .8;
+  -webkit-transform: scale(1.2);
+          transform: scale(1.2);
 }
 
 body.home .preview-section {
+  background-color: white;
+  -webkit-box-shadow: 0 10px 10px white, 0 -10px 10px white;
+          box-shadow: 0 10px 10px white, 0 -10px 10px white;
+  height: 219px;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
   margin-top: -16px;
   margin-left: auto;
   margin-right: auto;
-  height: 250px !important;
+  overflow: hidden;
+  padding-top: 16px;
   position: relative;
 }
 
-@media (max-width: 500px) {
+@media (max-width: 1350px) {
   body.home .preview-section {
-    height: 200px !important;
+    height: 180px;
+  }
+}
+
+@media (max-width: 988px) {
+  body.home .preview-section {
+    height: 275px;
+  }
+}
+
+@media (max-width: 915px) {
+  body.home .preview-section {
+    height: 220px;
+  }
+}
+
+@media (max-width: 648px) {
+  body.home .preview-section {
+    height: 300px;
+  }
+}
+
+@media (max-width: 560px) {
+  body.home .preview-section {
+    height: 185px;
+  }
+}
+
+@media (max-width: 400px) {
+  body.home .preview-section {
+    height: 175px;
+  }
+}
+
+@media (max-width: 350px) {
+  body.home .preview-section {
+    height: 145px;
   }
 }
 
@@ -1169,7 +1474,7 @@ body.home .clothing-section {
 body.home .clothing-section .clothing-title-mobile {
   color: #eee;
   display: none;
-  font-family: 'Cormorant', serif;
+  font-family: 'Goldoni', serif;
   padding-top: 40px;
   text-align: center;
 }
@@ -1254,11 +1559,12 @@ body.home .clothing-section .left.showing {
 
 body.home .clothing-section .left .clothing-title {
   color: #eee;
-  font-family: 'Cormorant', sans-serif;
+  font-family: 'Goldoni', sans-serif;
   font-weight: 400;
   letter-spacing: 2px;
   padding-bottom: 20px;
   text-align: center;
+  word-spacing: 10px;
 }
 
 @media (max-width: 905px) {
@@ -1290,7 +1596,7 @@ body.home .clothing-section .left .clothing-copy-box.showing {
 
 body.home .clothing-section .left .clothing-copy {
   background-blend-mode: soft-light;
-  background-color: #ddd;
+  background-color: #efefef;
   background-image: url("../images/watercolor/blue.jpg");
   background-size: cover;
   background-position: bottom;
@@ -1413,7 +1719,7 @@ body.home .clothing-section .left .clothing-copy .tagline {
   text-align: center;
 }
 
-body.home .clothing-section .left .clothing-copy .button, body.home .clothing-section .left .clothing-copy .sbi_load_btn, body.home .clothing-section .left .clothing-copy .woocommerce.post-type-archive-product main ul.products li.product .button, .woocommerce.post-type-archive-product main ul.products li.product body.home .clothing-section .left .clothing-copy .button, body.home .clothing-section .left .clothing-copy .wpforms-container form.wpforms-form .wpforms-submit, .wpforms-container form.wpforms-form body.home .clothing-section .left .clothing-copy .wpforms-submit {
+body.home .clothing-section .left .clothing-copy .button, body.home .clothing-section .left .clothing-copy .woocommerce.post-type-archive-product main ul.products li.product .button, .woocommerce.post-type-archive-product main ul.products li.product body.home .clothing-section .left .clothing-copy .button, body.home .clothing-section .left .clothing-copy .wpforms-container form.wpforms-form .wpforms-submit, .wpforms-container form.wpforms-form body.home .clothing-section .left .clothing-copy .wpforms-submit {
   margin-top: 30px;
   margin-left: auto;
   margin-right: auto;
@@ -1540,7 +1846,7 @@ body.home .about-section {
 
 body.home .about-section .mobile-title {
   display: none;
-  font-family: 'Cormorant', serif;
+  font-family: 'Goldoni', serif;
   font-size: 4rem;
   text-align: center;
 }
@@ -1739,7 +2045,7 @@ body.home .about-section .right.showing {
 }
 
 body.home .about-section .right .title {
-  font-family: "Cormorant", sans-serif;
+  font-family: "Goldoni", sans-serif;
   font-weight: 400;
   margin-bottom: 25px;
   text-align: center;
@@ -1771,10 +2077,14 @@ body.home .about-section .right .about-copy-box.showing {
 }
 
 body.home .about-section .right .about-copy {
-  background-color: #444;
+  background-attachment: fixed;
+  background-color: #efefef;
+  background-image: url("../images/watercolor/blue.jpg");
+  background-blend-mode: soft-light;
+  background-repeat: no-repeat;
+  background-size: cover;
   -webkit-clip-path: polygon(10% 0, 90% 0, 100% 10%, 100% 90%, 90% 100%, 10% 100%, 0 90%, 0 10%);
           clip-path: polygon(10% 0, 90% 0, 100% 10%, 100% 90%, 90% 100%, 10% 100%, 0 90%, 0 10%);
-  color: #eee;
   padding: 45px;
   line-height: 2;
   max-width: 700px;
@@ -1807,7 +2117,7 @@ body.home .about-section .right .about-copy {
 }
 
 body.home .about-section .right .about-copy p {
-  color: #eee;
+  color: #444;
   font-size: 18px;
   margin: 0 auto;
   max-width: 620px;
@@ -1865,8 +2175,22 @@ body.home section.instagram .sb_instagram_header {
   padding-left: 50px;
 }
 
+body.home section.instagram h2.instagram-title {
+  font-family: 'Goldoni', serif;
+}
+
 body.home section.instagram #sb_instagram .sbi_follow_btn {
   display: none !important;
+}
+
+body.home section.instagram #sb_instagram .sbi_photo {
+  -webkit-transition: all .2s;
+  transition: all .2s;
+}
+
+body.home section.instagram #sb_instagram .sbi_photo:hover {
+  -webkit-box-shadow: 0 0 20px #444;
+          box-shadow: 0 0 20px #444;
 }
 
 .woocommerce-breadcrumb {
@@ -1894,20 +2218,34 @@ body.home section.instagram #sb_instagram .sbi_follow_btn {
   }
 }
 
+.woocommerce.post-type-archive-product main .page-title {
+  margin-bottom: 32px;
+}
+
 .woocommerce.post-type-archive-product main .page-title,
 .woocommerce.post-type-archive-product main .product {
   text-align: center;
 }
 
 .woocommerce.post-type-archive-product main .woocommerce-result-count {
+  font-family: 'Montserrat', sans-serif;
+  font-weight: bold;
   width: 50%;
   text-align: right;
+  padding: 5px;
   padding-right: 15px;
 }
 
 .woocommerce.post-type-archive-product main .woocommerce-ordering {
-  width: 50%;
   padding-left: 15px;
+  width: 50%;
+}
+
+.woocommerce.post-type-archive-product main .woocommerce-ordering select {
+  border: 1px solid #177512 !important;
+  border-radius: 5px !important;
+  cursor: pointer;
+  padding: 5px 8px;
 }
 
 .woocommerce.post-type-archive-product main .woocommerce-notices-wrapper {
@@ -1937,7 +2275,7 @@ body.home section.instagram #sb_instagram .sbi_follow_btn {
 .woocommerce.post-type-archive-product main ul.products li.product {
   -webkit-box-shadow: 0 1px 2px rgba(0, 0, 0, 0.15);
           box-shadow: 0 1px 2px rgba(0, 0, 0, 0.15);
-  padding: 30px;
+  padding: 10px;
   -webkit-transition: all .2s;
   transition: all .2s;
 }
@@ -1949,12 +2287,13 @@ body.home section.instagram #sb_instagram .sbi_follow_btn {
 
 .woocommerce.post-type-archive-product main ul.products li.product a {
   background-color: rgba(255, 255, 255, 0.28);
-  padding: 30px;
+  margin-left: -12px;
+  padding: 16px;
 }
 
 .woocommerce.post-type-archive-product main ul.products li.product .woocommerce-loop-product__title {
   font-family: 'Cormorant', serif !important;
-  font-size: 28px;
+  font-size: 28px !important;
   text-align: center;
 }
 
@@ -1977,7 +2316,7 @@ body.home section.instagram #sb_instagram .sbi_follow_btn {
 }
 
 .woocommerce.post-type-archive-product main ul.products li.product .amount {
-  font-size: 22px;
+  font-size: 17px !important;
   line-height: 1.2;
 }
 
@@ -2005,6 +2344,10 @@ body.home section.instagram #sb_instagram .sbi_follow_btn {
   }
 }
 
+.woocommerce.post-type-archive-product main ul.products li.product .button, .woocommerce.post-type-archive-product main ul.products li.product .wpforms-container form.wpforms-form .wpforms-submit, .wpforms-container form.wpforms-form .woocommerce.post-type-archive-product main ul.products li.product .wpforms-submit {
+  background-color: rgba(175, 242, 255, 0.3) !important;
+}
+
 #sidebar,
 .product_meta {
   display: none;
@@ -2015,12 +2358,37 @@ body.home section.instagram #sb_instagram .sbi_follow_btn {
   margin: 70px auto 0;
 }
 
-.single-product .product ol.flex-control-thumbs {
-  margin-top: 20px !important;
+.single-product .product .summary .product_title {
+  font-family: 'Goldoni';
 }
 
-.single-product .product ol.flex-control-thumbs li {
+.single-product .product .summary ol.flex-control-thumbs {
+  list-style-type: none;
+  margin-top: 0 !important;
+  padding: 0;
+}
+
+.single-product .product .summary ol.flex-control-thumbs li {
+  cursor: pointer;
+  display: inline-block;
   margin-right: 10px !important;
+  -webkit-transition: all .2s;
+  transition: all .2s;
+}
+
+.single-product .product .summary ol.flex-control-thumbs li:hover {
+  -webkit-box-shadow: 0 0 8px #888;
+          box-shadow: 0 0 8px #888;
+  -webkit-transform: scale(1.2);
+          transform: scale(1.2);
+}
+
+.single-product .product .summary .price {
+  font-size: 1.5em;
+}
+
+.single-product .product .related {
+  clear: both;
 }
 
 .single-product .product .products h2.woocommerce-loop-product__title {
@@ -2037,6 +2405,10 @@ body.home section.instagram #sb_instagram .sbi_follow_btn {
   text-align: center;
 }
 
+.woocommerce-tabs {
+  display: none;
+}
+
 .woocommerce-account .woocommerce-form-login {
   background-color: rgba(255, 255, 255, 0.7);
   max-width: 500px;
@@ -2044,11 +2416,11 @@ body.home section.instagram #sb_instagram .sbi_follow_btn {
 }
 
 .woocommerce-account .woocommerce-form-login .lost_password a {
-  color: #1e9b17;
+  color: #7aebf0;
 }
 
 .woocommerce-account .woocommerce-form-login .lost_password a:hover {
-  color: #11580d;
+  color: #35e1e8;
 }
 
 .woocommerce-account .woocommerce-form-login .woocommerce-Input {
@@ -2291,6 +2663,49 @@ body.home section.instagram #sb_instagram .sbi_follow_btn {
   margin-bottom: 15px;
 }
 
+.cf-container label,
+.cf-container input,
+.cf-container textarea,
+.cf-container select {
+  width: 100%;
+}
+
+.cf-container label {
+  font-weight: bold;
+  font-family: 'Montserrat';
+}
+
+.cf-container input {
+  border: 1px solid #177512 !important;
+  border-radius: 5px !important;
+  padding: 5px 8px;
+}
+
+.cf-container .send-box {
+  padding: 0 5px;
+  text-align: center;
+  width: 100%;
+}
+
+.cf-container .send-box .wpcf7-submit {
+  background-color: #444 !important;
+  border: 2px solid #444 !important;
+  -webkit-clip-path: polygon(10% 0%, 90% 0%, 100% 10%, 100% 90%, 90% 100%, 10% 100%, 0% 90%, 0% 10%);
+          clip-path: polygon(10% 0%, 90% 0%, 100% 10%, 100% 90%, 90% 100%, 10% 100%, 0% 90%, 0% 10%);
+  color: white !important;
+  cursor: pointer;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: bold;
+  letter-spacing: 3px;
+  margin-top: 32px;
+  width: 150px;
+}
+
+.cf-container .send-box .wpcf7-submit:hover {
+  background-color: #eee !important;
+  color: #444 !important;
+}
+
 .page-id-249 .wholesale-container {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -2304,16 +2719,17 @@ body.home section.instagram #sb_instagram .sbi_follow_btn {
 }
 
 .page-id-249 .wholesale p {
+  font-size: 20px;
   text-align: center;
 }
 
 .page-id-249 .wholesale .wpforms-container a {
-  color: #1e9b17;
+  color: #7aebf0;
   font-weight: bold;
 }
 
 .page-id-249 .wholesale .wpforms-container a:hover {
-  color: #11580d;
+  color: #35e1e8;
 }
 
 .page-id-249 .login {
@@ -2323,11 +2739,11 @@ body.home section.instagram #sb_instagram .sbi_follow_btn {
 }
 
 .page-id-249 .login .lost_password a {
-  color: #1e9b17;
+  color: #7aebf0;
 }
 
 .page-id-249 .login .lost_password a:hover {
-  color: #11580d;
+  color: #35e1e8;
 }
 
 .page-id-249 .login .woocommerce-Input {
@@ -2342,6 +2758,7 @@ body.home section.instagram #sb_instagram .sbi_follow_btn {
 .page-id-249 .login .woocommerce-form-login__submit {
   background-color: transparent;
   border: 1px solid #222 !important;
+  cursor: pointer;
 }
 
 .page-id-249 .login .woocommerce-form-login__submit:hover {

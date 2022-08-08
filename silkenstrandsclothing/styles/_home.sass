@@ -1,7 +1,11 @@
 body.home
-   // padding: 20px 0 50px
    h2
       font-size: 60px
+      @media (max-width: 500px)
+         font-size: 42px
+
+   main
+      padding-top: 80px !important
 
    .hero-section
       background-image: url('../images/watercolor/watercolor2.jpg')
@@ -12,12 +16,19 @@ body.home
       max-height: 600px
       overflow: hidden
       position: relative
-      @media (max-width: 905px)
-         display: block
 
       .left
+         position: relative
          width: 50%
          @media (max-width: 905px)
+            width: 100%
+
+         .overlay
+            background-color: rgba(255, 255, 255, .3)
+            height: 100%
+            position: absolute
+            top: 0
+            left: 0
             width: 100%
 
       .right
@@ -27,31 +38,19 @@ body.home
          @media (max-width: 1150px)
             padding: 25px
          @media (max-width: 905px)
-            background-color: rgba(0, 0, 0, .7)
-            position: absolute
-            top: 0
-            left: 0
-            width: 100%
-            height: 100%
+            background-color: #ffffffb3
          @media (max-width: 450px)
             padding: 15px
 
          .hero-elements
-            align-items: center
-            display: flex
-            flex-direction: column
-            @media (max-width: 905px)
-               position: absolute
-               top: 50px
-               left: 50%
-               transform: translateX(-50%)
-               width: 90%
-               @media (max-width: 500px)
-                  top: 25px
+            position: absolute
+            top: 0
+            left: 0
+            height: 100%
+            width: 100%
 
          .home-title,
          .tagline,
-         .tagline2,
          .cta,
          .social
             opacity: 0
@@ -60,81 +59,118 @@ body.home
             &.showing
                opacity: 1
                transform: none
+         
+         .home-title,
+         .tagline
+            width: 100%
+        
 
          .home-title
-            font-size: 120px
-            margin-top: 0
+            color: #777
+            font-size: 150px
+            margin-top: 16px
+            text-align: right
             @media (max-width: 1500px)
-               font-size: 100px
+               font-size: 150px
             @media (max-width: 1300px)
-               font-size: 80px
+               font-size: 110px
+            @media (max-width: 1250px)
+               font-size: 95px
             @media (max-width: 1000px)
-               font-size: 65px
+               font-size: 85px
             @media (max-width: 905px)
-               color: $light
+               color: $bannerDarkly
                font-size: 90px
-            @media (max-width: 580px)
-               font-size: 70px
-            @media (max-width: 440px)
+               text-align: center
+               text-shadow: 1px 1px 3px white
+            @media (max-width: 600px)
+               font-size: 80px
+               margin-top: 24px
+            @media (max-width: 500px)
                font-size: 60px
-            @media (max-width: 400px)
-               font-size: 50px
+            @media (max-width: 420px)
+               // font-size: 50px
+               margin-top: 48px
             @media (max-width: 320px)
-               font-size: 40px
+               font-size: 50px
 
-         .tagline,
-         .tagline2
+         .tagline
             color: $dark
             font-family: 'Montserrat', sans-serif
             font-size: 20px
             line-height: 2
+            margin-left: 3%
+            margin-top: 40px
+            text-align: left
+            word-spacing: 2px
             @media (max-width: 1075px)
                font-size: 17px
             @media (max-width: 905px)
-               color: $light
+               // color: $light
                font-size: 20px
+               margin-left: 0
+               text-align: center
             @media (max-width: 600px)
                font-size: 18px
-            @media (max-width: 450px)
                line-height: 1.5
-
-         .tagline
-            // margin-top: 0px
-            word-spacing: 2px
-            // @media (max-width: 1000px)
-            //    margin-bottom: 0
-            @media (max-width: 500px)
                word-spacing: 1px
-            @media (max-width:440px)
+            @media (max-width: 420px)
                display: none
-            .star
-               display: inline-block
-               padding: 0 10px
-               @media (max-width: 1000px)
-                  padding: 0 5px
-               @media (max-width: 905px)
-                  color: $light
+
+            .one,
+            .two
+               color: #aaa
+               font-family: 'Goldoni'
+               font-size: 5em
+               line-height: 0
+               text-shadow: 1px 1px black
+               width: 100%
+               word-break: keep-all
+               @media (max-width: 1650px)
+                  font-size: 4.5em
+               @media (max-width: 1400px)
+                  font-size: 4em
+               @media (max-width: 1250px)
+                  font-size: 3.5em
+               @media (max-width: 850px)
+                  font-size: 3em
+               @media (max-width: 600px)
+                  font-size: 2.5em
+               @media (max-width: 440px)
+                  font-size: 2em
                
-         .tagline2
-            font-style: italic
-            @media (max-width: 1300px)
-               margin-bottom: 0
-            @media (max-width: 1150px)
+               span
+                  color: $dark
+                  text-shadow: 1px 1px $light
+
+            .one
                margin-top: 0
-            @media (max-width: 550px)
-               display: none
+               opacity: .3
+            .two
+               margin-left: 8%
+               opacity: .5
+               @media (max-width: 1350px)
+                  margin-left: 5%
+               @media (max-width: 905px)
+                  margin-left: 0
 
          .cta
             margin: 0
             padding: 0
+            position: absolute
+            bottom: 15%
+            right: 0
+            width: 50%
+            @media (max-width: 905px)
+               width: 100%
+            @media (max-width: 600px)
+               bottom: 10%
+            @media (max-width: 420px)
+               bottom: 15%
          
          .button
-            margin-top: 25px
             @media (max-width: 1200px)
                margin-top: 50px
-            @media (max-width: 905px)
-               border-color: $light
-               color: $light
             @media (max-width: 600px)
                margin-top: 30px
             @media (max-width: 450px)
@@ -146,14 +182,12 @@ body.home
 
          .social
             margin-top: 35px
-            @media (max-width: 1400px)
-               margin-top: 45px
-            // @media (max-width: 1000px)
-            //    margin-top: 25px
-            // @media (max-width: 875px)
-            //    margin-top: 15px
-            // @media (max-width: 600px)
-            //    margin-top: 30px
+            // @media (max-width: 1400px)
+            //    margin-top: 45px
+            @media (max-width: 600px)
+               margin-top: 16px
+            @media (max-width: 420px)
+               margin-top: 32px
             
             a
                transition: all .25s
@@ -163,24 +197,43 @@ body.home
                   height: 35px
                   margin: 0 15px
                   transition: all .25s
-                  @media (max-width: 905px)
-                     fill: $light
+                  // @media (max-width: 905px)
+                  //    fill: $light
                         
                &:hover
                   svg
                      opacity: .8
+                     transform: scale(1.2)
 
 
 
    .preview-section
+      background-color: white
+      box-shadow: 0 10px 10px white, 0 -10px 10px white
+      height: 219px
       justify-content: center
       margin-top: -16px
       margin-left: auto
       margin-right: auto
-      height: 250px !important
+      overflow: hidden
+      padding-top: 16px
       position: relative
-      @media (max-width: 500px)
-         height: 200px !important
+      @media (max-width: 1350px)
+         height: 180px 
+      @media (max-width: 988px)
+         height: 275px 
+      @media (max-width: 915px)
+         height: 220px 
+      // @media (max-width: 768px)
+      //    height: 1850px 
+      @media (max-width: 648px)
+         height: 300px 
+      @media (max-width: 560px)
+         height: 185px 
+      @media (max-width: 400px)
+         height: 175px 
+      @media (max-width: 350px)
+         height: 145px 
          
       #display
          color: #eee
@@ -259,7 +312,7 @@ body.home
       .clothing-title-mobile
          color: $light
          display: none
-         font-family: 'Cormorant', serif
+         font-family: 'Goldoni', serif
          padding-top: 40px
          text-align: center
          @media (max-width: 905px)
@@ -298,11 +351,12 @@ body.home
 
          .clothing-title
             color: $light
-            font-family: 'Cormorant', sans-serif
+            font-family: 'Goldoni', sans-serif
             font-weight: 400
             letter-spacing: 2px
             padding-bottom: 20px
             text-align: center
+            word-spacing: 10px
             @media (max-width: 905px)
                display: none
 
@@ -319,7 +373,7 @@ body.home
 
          .clothing-copy
             background-blend-mode: soft-light
-            background-color: #ddd
+            background-color: #efefef
             background-image: url('../images/watercolor/blue.jpg')
             background-size: cover
             background-position: bottom
@@ -449,7 +503,7 @@ body.home
 
       .mobile-title
          display: none
-         font-family: 'Cormorant', serif
+         font-family: 'Goldoni', serif
          font-size: 4rem
          text-align: center
          @media (max-width: 700px)
@@ -542,7 +596,7 @@ body.home
             padding: 0 20px
 
          .title
-            font-family: "Cormorant", sans-serif
+            font-family: "Goldoni", sans-serif
             font-weight: 400
             margin-bottom: 25px
             text-align: center
@@ -563,9 +617,14 @@ body.home
                transform: scale(1.05)
 
          .about-copy
-            background-color: $dark
+            // background-color: $dark
+            background-attachment: fixed
+            background-color: #efefef
+            background-image: url('../images/watercolor/blue.jpg')
+            background-blend-mode: soft-light
+            background-repeat: no-repeat
+            background-size: cover
             clip-path: polygon(10% 0, 90% 0, 100% 10%, 100% 90%, 90% 100%, 10% 100%, 0 90%, 0 10%)
-            color: $light
             padding: 45px
             line-height: 2
             max-width: 700px
@@ -581,7 +640,7 @@ body.home
                padding: 30px 20px
 
             p
-               color: $light
+               color: $dark
                font-size: 18px
                margin: 0 auto
                max-width: 620px
@@ -619,10 +678,18 @@ body.home
       .sb_instagram_header
          padding-left: 50px
 
+      h2.instagram-title
+         font-family: 'Goldoni', serif
+
       #sb_instagram
 
          .sbi_follow_btn
             display: none !important
+
+         .sbi_photo
+            transition: all .2s
+            &:hover
+               box-shadow: 0 0 20px #444
 
          // .sbi_load_btn
          //    background-color: #ffffff !important

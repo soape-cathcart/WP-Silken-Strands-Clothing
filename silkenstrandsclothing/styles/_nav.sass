@@ -1,13 +1,87 @@
-.desktop-nav
-   background-color: white
-   display: flex
-   flex-direction: row
-   flex-wrap: nowrap
-   height: 50px
+// header
+//    height: 100px
+
+header
    position: fixed
-   transition: all ease-in .25s
    width: 100%
    z-index: 999
+   // @media (max-width: 1000px)
+   //    background-color: #777
+   //    height: 80px
+
+   .logo
+      position: absolute
+      left: 32px
+      top: -20px
+      @media (max-width: 1100px)
+         top: 0
+
+      a
+         color: $banner
+         font-family: 'Snell', cursive
+         font-size: 80px
+         text-shadow: 1px 1px 3px white
+         @media (max-width: 1200px)
+            font-size: 70px
+         @media (max-width: 1100px)
+            font-size: 60px
+         @media (max-width: 1000px)
+            text-shadow: none
+   
+.banner-nav
+   background-color: $banner1
+   top: 0
+   right: 0
+   width: 100%
+   @media (max-width: 768px)
+      display: none
+
+   .banner-nav-links
+      display: flex
+      flex-direction: row
+      justify-content: flex-end
+      // padding-right: 40px
+
+      li
+         display: block
+         height: 100%
+         list-style-type: none
+         margin: 0
+         padding: 0
+         text-align: center
+         width: 200px
+         @media (max-width: 600px)
+            width: 50%
+
+         a
+            clip-path: polygon(100% 0, 100% 90%, 95% 100%, 5% 100%, 0 90%, 0 0)
+            color: $dark
+            font-family: 'Montserrat', sans-serif
+            font-size: 16px
+            font-weight: bold
+            letter-spacing: 1px
+            display: block
+            height: 100%
+            width: 100%
+            padding: 8px 20px
+            
+            &:hover
+               background-color: $dark
+               span
+                  color: $banner1
+
+            span
+               color: $dark
+                  
+.desktop-nav
+   background-color: white
+   box-shadow: 0 5px 10px #ddd
+   display: block
+   height: 50px
+   transition: all ease-in .25s
+   width: 100%
+   @media (max-width: 768px)
+      display: none
 
    &:hover
       @extend .expand-nav
@@ -15,18 +89,12 @@
       
       .nav-links li a 
          color: $light
-
-   .home-logo
-      position: absolute
-      top: 0
-      left: 0
       
-
-
+   
    .nav-links 
       display: flex
       flex-direction: row
-      justify-content: center
+      justify-content: flex-end
       margin: 0
       padding: 0
       width: 100%
@@ -38,7 +106,11 @@
          margin: 0
          padding: 0
          text-align: center
-         width: 230px
+         width: 200px
+         @media (max-width: 1100px)
+            min-width: 150px
+            width: auto
+         
 
          a
             clip-path: polygon(100% 0, 100% 90%, 95% 100%, 5% 100%, 0 90%, 0 0)
@@ -53,9 +125,12 @@
             text-transform: uppercase
             transition: all .25s ease-in
             width: 100%
+            @media (max-width: 1200px)
+               font-size: 18px
 
             &:hover
                background-color: $light
+               border-top: 4px solid $dark
                color: $dark
                padding-top: 30px
 
@@ -90,13 +165,15 @@
 // ***     MOBILE NAV      ***
 
 .mobile-nav
-   background-color: #aaa
+   background-color: $dark
    display: none
    height: 100vh
    width: 300px
    right: 0
    position: fixed
    top: 0
+   // @media (max-width: 1000px)
+      // display: block
 
    .nav-toggle
       cursor: pointer
@@ -113,7 +190,6 @@
       .svg-close
          display: none
          position: absolute
-         // opacity: 0
          top: 0
          transition: all .25s ease-in
 
@@ -138,11 +214,24 @@
             text-decoration: none
             text-transform: uppercase
 
+   .mobile-menu-close
+      display: none
+      position: absolute
+      top: 16px
+      right: 16px
+      z-index: 15
+      &.showing
+         display: block
 
 
-.mobile-nav.open-menu 
 
-   .nav-lnks
-      display: flex
-      flex-direction: column
-      flex-wrap: nowrap
+   
+
+
+
+// .mobile-nav.open-menu 
+
+//    .nav-lnks
+//       display: flex
+//       flex-direction: column
+//       flex-wrap: nowrap

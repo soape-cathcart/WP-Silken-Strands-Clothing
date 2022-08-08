@@ -4,11 +4,30 @@
       max-width: 1200px
       margin: 70px auto 0
 
-      ol.flex-control-thumbs
-         margin-top: 20px !important
+      .summary
 
-         li
-            margin-right: 10px !important
+         .product_title
+            // font-family: 'Chonburi'
+            font-family: 'Goldoni'
+         ol.flex-control-thumbs
+            list-style-type: none
+            margin-top: 0 !important
+            padding: 0
+
+            li
+               cursor: pointer
+               display: inline-block
+               margin-right: 10px !important
+               transition: all .2s
+               &:hover
+                  box-shadow: 0 0 8px #888
+                  transform: scale(1.2)
+            
+         .price
+            font-size: 1.5em
+
+      .related
+         clear: both
 
       .products
          h2.woocommerce-loop-product__title
@@ -21,3 +40,7 @@
 
          .product
             text-align: center
+
+
+.woocommerce-tabs
+   display: none

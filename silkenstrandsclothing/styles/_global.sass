@@ -1,5 +1,8 @@
-body
+html
    overflow-x: hidden
+
+body
+   overflow-x: hidden !important
    background-image: url('../images/watercolor/watercolor3-faded.jpg')
    background-position: center
    background-repeat: no-repeat
@@ -17,7 +20,8 @@ h1
    font-weight: 400
    font-size: 100px
 
-h2,
+h2
+   font-family: 'Goldoni'
 h3,
 h4
    font-family: 'Cormorant', sans-serif
@@ -81,9 +85,7 @@ ul
       text-align: center
 
    main
-      padding: 50px 0
-   main.home-content
-      padding: 20px 0 50px
+      padding: 100px 0
 
    .blue
       color: $blue
@@ -100,3 +102,7 @@ table
 
 address
    text-align: center !important
+
+// menu icon alignment fix
+.menu-item a img, img.menu-image-title-after
+   vertical-align: bottom !important
