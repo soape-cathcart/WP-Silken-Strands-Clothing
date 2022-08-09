@@ -1,1 +1,0 @@
-# WP-Silken-Strands-Clothing
