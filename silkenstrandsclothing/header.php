@@ -27,59 +27,124 @@
   <?php wp_head(); ?>
 </head>
 
-<body <?php body_class(); ?>>
+<body <?php body_class($class); ?>>
+
  
-   <header>
-      <nav class="desktop-nav">
-         <!-- <a href="<?php //echo esc_url('/'); ?>" class="home-logo">
-            Silken Strands
-         </a> -->
+      <header id="silkenstrands-header">
+         <?php if (!is_front_page()): ?>
+            <div class="logo">
+               <a href="/">Silken Strands</a>
+            </div>
+         <?php endif; ?>
 
-		<?php 
-			$menu_args = array(
-				'menu'                 => '',
-				'container'            => 'false',
-				'container_class'      => '',
-				'container_id'         => '',
-				'container_aria_label' => '',
-				'menu_class'           => 'nav-links',
-				'menu_id'              => '',
-				'echo'                 => true,
-				'fallback_cb'          => 'wp_page_menu',
-				'before'               => '',
-				'after'                => '',
-				'link_before'          => '',
-				'link_after'           => '',
-				'items_wrap'           => '<ul id="%1$s" class="%2$s">%3$s</ul>',
-				'item_spacing'         => 'preserve',
-				'depth'                => 0,
-				'walker'               => '',
-				'theme_location'       => 'header',
-			);
-			wp_nav_menu($args = $menu_args);
-		?>
+         <div class="banner-nav">
 
-      </nav>
-      <nav class="mobile-nav open-menu">
-         <div class="nav-toggle">
-            <svg class="svg-burger" viewBox="0 0 60 60" width="60" height="60">
-               <rect width="60" height="7" fill="#ccc"></rect>
-               <rect y="20" width="60" height="7" fill="#ccc"></rect>
-               <rect y="40" width="60" height="7" fill="#ccc"></rect>
-             </svg>
-             <br/>
-             <svg class="svg-close" viewBox="0 0 60 60" width="60" height="60">
-               <line x1="0" y1="60" x2="60" y2="0" stroke-width="7" stroke="#ccc" />
-               <line x1="0" y1="0" x2="60" y2="60" stroke-width="7" stroke="#ccc" />
-             </svg>
+         <?php 
+            $banner_menu_args = array(
+               'menu'                 => '',
+               'container'            => 'false',
+               'container_class'      => '',
+               'container_id'         => '',
+               'container_aria_label' => '',
+               'menu_class'           => 'banner-nav-links',
+               'menu_id'              => '',
+               'echo'                 => true,
+               'fallback_cb'          => 'wp_page_menu',
+               'before'               => '',
+               'after'                => '',
+               'link_before'          => '',
+               'link_after'           => '',
+               'items_wrap'           => '<ul id="%1$s" class="%2$s">%3$s</ul>',
+               'item_spacing'         => 'preserve',
+               'depth'                => 0,
+               'walker'               => '',
+               'theme_location'       => 'banner',
+            );
+            wp_nav_menu($args = $banner_menu_args);
+         ?>
+
          </div>
 
-			<?php wp_nav_menu($args = $menu_args); ?>
+         <div class="desktop-nav">
+            <nav>
+               <!-- <a href="<?php //echo esc_url('/'); ?>" class="home-logo">
+                  Silken Strands
+               </a> -->
+   
+            <?php 
+               $menu_args1 = array(
+                  'menu'                 => '',
+                  'container'            => 'false',
+                  'container_class'      => '',
+                  'container_id'         => '',
+                  'container_aria_label' => '',
+                  'menu_class'           => 'nav-links',
+                  'menu_id'              => '',
+                  'echo'                 => true,
+                  'fallback_cb'          => 'wp_page_menu',
+                  'before'               => '',
+                  'after'                => '',
+                  'link_before'          => '',
+                  'link_after'           => '',
+                  'items_wrap'           => '<ul id="%1$s" class="%2$s">%3$s</ul>',
+                  'item_spacing'         => 'preserve',
+                  'depth'                => 0,
+                  'walker'               => '',
+                  'theme_location'       => 'header',
+               );
+               wp_nav_menu($args = $menu_args1);
+            ?>
+   
+            </nav>
+         </div>
 
-         
+         <nav class="mobile-nav open-menu">
+            <div class="nav-toggle">
+               <svg class="svg-burger" viewBox="0 0 60 60" width="60" height="60">
+                  <rect width="60" height="7" fill="#ccc"></rect>
+                  <rect y="20" width="60" height="7" fill="#ccc"></rect>
+                  <rect y="40" width="60" height="7" fill="#ccc"></rect>
+               </svg>
+               <br/>
+               <svg class="svg-close" viewBox="0 0 60 60" width="60" height="60">
+                  <line x1="0" y1="60" x2="60" y2="0" stroke-width="7" stroke="#ccc" />
+                  <line x1="0" y1="0" x2="60" y2="60" stroke-width="7" stroke="#ccc" />
+               </svg>
+            </div>
 
-      </nav>
-      <div class="page-title">
 
-      </div>
-   </header>
+<?php 
+               $menu_args2 = array(
+                  'menu'                 => '',
+                  'container'            => 'false',
+                  'container_class'      => '',
+                  'container_id'         => '',
+                  'container_aria_label' => '',
+                  'menu_class'           => 'nav-links',
+                  'menu_id'              => '',
+                  'echo'                 => true,
+                  'fallback_cb'          => 'wp_page_menu',
+                  'before'               => '',
+                  'after'                => '',
+                  'link_before'          => '',
+                  'link_after'           => '',
+                  'items_wrap'           => '<ul id="%1$s" class="%2$s">%3$s</ul>',
+                  'item_spacing'         => 'preserve',
+                  'depth'                => 0,
+                  'walker'               => '',
+                  'theme_location'       => 'mobile',
+               );
+               wp_nav_menu($args = $menu_args2);
+            ?>
+
+               <span class="mobile-menu-close">
+               <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512"><!--! Font Awesome Pro 6.1.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2022 Fonticons, Inc. --><path d="M310.6 361.4c12.5 12.5 12.5 32.75 0 45.25C304.4 412.9 296.2 416 288 416s-16.38-3.125-22.62-9.375L160 301.3L54.63 406.6C48.38 412.9 40.19 416 32 416S15.63 412.9 9.375 406.6c-12.5-12.5-12.5-32.75 0-45.25l105.4-105.4L9.375 150.6c-12.5-12.5-12.5-32.75 0-45.25s32.75-12.5 45.25 0L160 210.8l105.4-105.4c12.5-12.5 32.75-12.5 45.25 0s12.5 32.75 0 45.25l-105.4 105.4L310.6 361.4z"/></svg>
+               </span>
+
+            
+
+         </nav>
+
+      </header>
+
+

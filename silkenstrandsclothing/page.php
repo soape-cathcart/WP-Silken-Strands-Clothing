@@ -21,7 +21,7 @@ the_content();
 
 
 // If Wholesale page
-if (get_the_ID() === 249):
+if (get_the_ID() === 245):
 
 	function loggedIn() {
 		echo 'width: 600px; margin: 0 auto';
@@ -38,8 +38,8 @@ if (get_the_ID() === 249):
 		<?php endif; ?>
 
 		<section class="wholesale" style="<?php is_user_logged_in() ? loggedIn() :  loggedOut(); ?>">
-			<p>Apply for Wholesaler status using the form below.</p>
-			<?php echo do_shortcode("[wpforms id='246']"); ?>
+			<p>Store owners can take advantage of our wholesale discounts! Please fill out the information below to apply and we’ll get back with you as soon as possible.</p>
+			<?php echo do_shortcode('[contact-form-7 id="244" title="Wholesaler Application"]'); ?>
 		</section>
 
 		<?php if (!is_user_logged_in()): ?>

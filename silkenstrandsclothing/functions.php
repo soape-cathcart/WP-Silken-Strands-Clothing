@@ -3,14 +3,18 @@
 function silkenstrands_files() {
    wp_enqueue_style('reset', get_template_directory_uri() . '/styles/reset.css');
    wp_enqueue_style('slick_styles', get_template_directory_uri() . '/styles/slick.css', array('reset'));
+   wp_enqueue_style('mmenu-styles', get_template_directory_uri() . '/styles/mmenu-light.css', array('reset'));
    wp_enqueue_style('silkenstrands_styles', get_template_directory_uri() . '/styles/main.css', array('slick_styles'));
    //wp_enqueue_style('silkenstrands_styles_map', get_template_directory_uri() . '/styles/main.css.map', array('silkenstrands_styles'));
    
    wp_register_script('jquery', '//code.jquery.com/jquery-3.6.0.min.js', NULL, '3.6.0', false);
    wp_enqueue_script('slick-js', get_template_directory_uri() . '/scripts/slick.js', array('jquery'), null, true);
    wp_enqueue_script('waypoint-js', get_template_directory_uri() . '/scripts/waypoint.js', array(), null, true);
+  //  wp_enqueue_script('mmenu-js', get_template_directory_uri() . '/scripts/mmenu-lite.js', array('jquery'), null, true);
+  //  wp_enqueue_script('mmenu2-js', get_template_directory_uri() . '/scripts/mmenu-lite.polyfills.js', array('mmenu-js'), null, true);
    wp_enqueue_script('custom-js', get_template_directory_uri() . '/scripts/functions.js', array('waypoint-js', 'slick-js'), '1.0', true);
    wp_enqueue_script('home-js', get_template_directory_uri() . '/scripts/home.js', array('waypoint-js', 'slick-js'), '1.0', true);
+   wp_enqueue_script('shop-js', get_template_directory_uri() . '/scripts/shop.js', array('waypoint-js', 'slick-js'), '1.0', true);
 }
 
 add_action('wp_enqueue_scripts', 'silkenstrands_files');
@@ -72,7 +76,9 @@ if( function_exists('acf_add_options_page') ) {
       register_nav_menus( array( 
         'header' => 'Header menu', 
         'footer' => 'Footer menu',
-        'account' => 'Account menu'
+        'banner' => 'Banner menu',
+        'account' => 'Account menu',
+        'mobile' => 'Mobile menu'
       ) );
      }
     
@@ -116,7 +122,7 @@ add_action( 'wp', 'remove_image_zoom_support', 100 );
   // add_action( 'woocommerce_before_shop_loop_item_title', 'add_on_hover_shop_loop_image' ) ; 
 
 
-
+ 
 
   // Rename My Account if not logged in
   add_filter( 'wp_nav_menu_items', 'ssc_dynamic_menu_item_label', 9999, 2 ); 
@@ -183,5 +189,7 @@ add_action( 'wp', 'remove_image_zoom_support', 100 );
 // Shortcodes
 
 include('custom-shortcodes.php')
+
+
 
 ?>
