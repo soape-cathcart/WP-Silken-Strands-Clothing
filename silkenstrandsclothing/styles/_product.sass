@@ -4,7 +4,17 @@
       max-width: 1200px
       margin: 70px auto 0
 
+      .woocommerce-product-gallery
+         box-shadow: 0 0 32px white
+         margin-top: 50px
+         width: 33% !important
+
       .summary
+         background-color: rgba(255,255,255,.6)
+         box-shadow: 0 0 32px white
+         padding: 16px
+         position: relative
+         width: 60% !important
 
          .product_title
             // font-family: 'Chonburi'
@@ -17,7 +27,7 @@
             li
                cursor: pointer
                display: inline-block
-               margin-right: 10px !important
+               margin-right: 24px !important
                transition: all .2s
                &:hover
                   box-shadow: 0 0 8px #888
@@ -26,20 +36,90 @@
          .price
             font-size: 1.5em
 
+         .woocommerce-product-details__short-description
+            font-size: 17px
+            line-height: 1.7
+
+         .variations_form 
+            background-color: transparent                                                                                                                                                                                                   
+
+         table.variations
+            background-color: transparent
+
+            th.label
+               padding: 5px
+               text-align: left
+            td.value
+               border-radius: 5px
+               select
+                  border: 1px solid $green
+                  border-radius: 5px
+                  cursor: pointer
+                  margin-bottom: 16px
+                  min-width: 225px !important
+                  padding: 8px
+                  transition: all .2s
+                  &:hover
+                     background-color: rgba(0,0,0,.05)
+                     box-shadow: 0 0 5px #aaa
+               select[name='attribute_pa_size']
+                  min-width: 225px !important
+
+               .reset_variations
+                  color: #8d1414
+                  font-size: 1em
+                  font-weight: bold
+                  letter-spacing: 1px
+
+         .quantity
+            margin: 4px 16px 0 216px !important
+            input
+               border: 1px solid $green
+               border-radius: 5px
+               padding: 4px 8px
+               text-align: left
+
+
+         .single_add_to_cart_button
+            background-color: transparent !important
+            color: $dark !important
+            position: absolute
+            left: 16px
+            &:hover
+               background-color: $dark !important
+               color: white !important
+
       .related
+         background-color: white
+         box-shadow: 0 0 20px white
          clear: both
+         max-width: 80%
+         margin: 0 auto
+         padding: 16px
 
-      .products
-         h2.woocommerce-loop-product__title
-            font-size: 1.5em !important
+         h2
             text-align: center
 
-         .price
-            font-size: 1em !important
-            text-align: center
+         ul.products
+            margin-top: 16px
 
-         .product
-            text-align: center
+            h2.woocommerce-loop-product__title
+               font-size: 1.5em !important
+               text-align: center
+
+            .price
+               font-size: 1em !important
+               text-align: center
+
+            li.product
+               padding: 8px 8px 16px
+               text-align: center
+               &:hover
+                  box-shadow: 2px 2px 15px
+
+                  .add_to_cart_button
+                     background-color: transparent !important
+                     color: $dark !important
 
 
 .woocommerce-tabs

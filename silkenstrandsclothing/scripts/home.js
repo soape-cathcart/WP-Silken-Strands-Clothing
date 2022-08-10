@@ -4,9 +4,9 @@ jQuery('document').ready(function () {
 
   // Set Section height based on square slider images
 
-  var vWidth = jQuery(window).width();
-  var iWidth = vWidth / 2;
-  var section = jQuery('.hero-section')
+  // var vWidth = jQuery(window).width();
+  // var iWidth = vWidth / 2;
+  // var section = jQuery('.hero-section')
 
   // section.css('height', iWidth)
 
