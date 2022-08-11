@@ -80,12 +80,7 @@ while(have_posts()) {
 
 
       <section class="preview-section">
-         <h2 id="display"><?php if (get_field('current_season', 'options')) {
-				the_field('current_season');
-				} else {
-					echo 'Spring 2022';
-				} ?>
-			</h2>
+         <!-- <h2 id="display">Spring 2022</h2> -->
 
 
 			<?php echo do_shortcode('[woo_product_slider id="253"]');?>

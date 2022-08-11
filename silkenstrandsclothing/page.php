@@ -8,7 +8,7 @@ while(have_posts()) {
 
 ?>
 
-<main class="">
+<main class="page-main">
 	<div class="container">
 
 	<h1 class="page-title"><?php the_title(); ?></h1>
@@ -28,7 +28,7 @@ if (get_the_ID() === 245):
 	}
 
 	function loggedOut() {
-		echo 'width: 60%;';
+		echo 'width: 60%; margin: 0 auto';
 	}
 	
 ?>
@@ -47,8 +47,8 @@ if (get_the_ID() === 245):
 			<p>Already have an account? Log in here.</p>
 			<?php echo do_shortcode("[wp_login_form]"); ?>
 		</section>
+		<?php endif; ?>
 	</div>
-	<?php endif; ?>
 	<?php endif; // if Wholesale page ?>
 
 	</div> <!-- /.container -->

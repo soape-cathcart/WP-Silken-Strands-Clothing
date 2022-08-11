@@ -17,11 +17,11 @@
    
 
    main
-      padding: 50px
-      @media (max-width: 500px)
-         padding: 30px
-      @media (max-width: 400px)
-         padding: 15px
+      padding: 90px 20px 20px
+      // @media (max-width: 500px)
+      //    padding: 30px
+      // @media (max-width: 400px)
+      //    padding: 15px
 
       .page-title
          margin-bottom: 32px
@@ -37,9 +37,20 @@
          text-align: right
          padding: 5px
          padding-right: 15px
+         @media (max-width: 768px)
+            text-align: center
+            width: auto
+         @media (max-width: 500px)
+            width: 100%
       .woocommerce-ordering
          padding-left: 15px
          width: 50%
+         @media (max-width: 768px)
+            width: auto
+            padding: 0
+         @media (max-width: 500px)
+            text-align: center
+            width: 100%
 
          select
             border: 1px solid #177512 !important
@@ -69,12 +80,12 @@
          li.product
             box-shadow: 0 1px 2px rgba(0,0,0,0.15)
             padding: 10px
-            // opacity: 0
-            // overflow: hidden
-            // transform: translateX(20px)
             transition: all .2s
             &:hover
                box-shadow: 2px 2px 15px
+               .add_to_cart_button
+                     background-color: transparent !important
+                     color: $dark !important
 
             a
                background-color: rgba(255,255,255,0.28)
@@ -111,6 +122,13 @@
 #sidebar,
 .product_meta
    display: none
+
+@media only screen and (max-width: 500px)
+    .woocommerce ul.products[class*=columns-] li.product, .woocommerce-page ul.products[class*=columns-] li.product
+        width: 100% !important
+        clear: none!important
+    
+
 
 
 // Hover Image styling

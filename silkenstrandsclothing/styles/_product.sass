@@ -4,10 +4,24 @@
       max-width: 1200px
       margin: 70px auto 0
 
+      & > .product_title
+         font-family: 'Goldoni'
+         font-size: 65px
+         text-align: center
+         @media (min-width: 768px)
+            display: none
+      & > .flex-control-nav
+         display: none
+
       .woocommerce-product-gallery
          box-shadow: 0 0 32px white
          margin-top: 50px
-         width: 33% !important
+         margin-left: auto
+         margin-right: auto
+         width: 80% !important
+         z-index: 5
+         @media (min-width: 768px)
+            width: 33% !important
 
       .summary
          background-color: rgba(255,255,255,.6)
@@ -15,14 +29,25 @@
          padding: 16px
          position: relative
          width: 60% !important
+         @media (max-width: 768px)
+            margin: 0 auto !important
+            width: 500px !important
+            z-index: 0
+         @media (max-width: 550px)
+            width: 95% !important
+         @media (max-width: 400px)
+            width: 98% !important
 
          .product_title
-            // font-family: 'Chonburi'
             font-family: 'Goldoni'
+            @media (max-width: 768px)
+               display: none
          ol.flex-control-thumbs
             list-style-type: none
             margin-top: 0 !important
             padding: 0
+            @media (max-width: 768px)
+               text-align: center
 
             li
                cursor: pointer
@@ -35,13 +60,15 @@
             
          .price
             font-size: 1.5em
+            @media (max-width: 768px)
+               text-align: center
 
          .woocommerce-product-details__short-description
             font-size: 17px
             line-height: 1.7
 
          .variations_form 
-            background-color: transparent                                                                                                                                                                                                   
+            background-color: transparent      
 
          table.variations
             background-color: transparent
@@ -72,10 +99,10 @@
                   letter-spacing: 1px
 
          .quantity
-            margin: 4px 16px 0 216px !important
+            margin: 4px 16px 0 0 !important
             input
                border: 1px solid $green
-               border-radius: 5px
+               border-radius: 5px 
                padding: 4px 8px
                text-align: left
 
@@ -83,11 +110,17 @@
          .single_add_to_cart_button
             background-color: transparent !important
             color: $dark !important
-            position: absolute
-            left: 16px
+            // position: absolute
+            // left: 16px
             &:hover
                background-color: $dark !important
                color: white !important
+            // @media (max-width: 768px)
+            //    background-color: $dark !important
+            //    color: white !important
+            //    &:hover
+            //       background-color: transparent !important
+            //       color: $dark !important
 
       .related
          background-color: white
