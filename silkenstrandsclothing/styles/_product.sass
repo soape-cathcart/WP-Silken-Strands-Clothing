@@ -100,6 +100,8 @@
 
          .quantity
             margin: 4px 16px 0 0 !important
+            @media (max-width: 500px)
+               margin-left: 24px !important
             input
                border: 1px solid $green
                border-radius: 5px 
@@ -110,17 +112,10 @@
          .single_add_to_cart_button
             background-color: transparent !important
             color: $dark !important
-            // position: absolute
-            // left: 16px
             &:hover
                background-color: $dark !important
                color: white !important
-            // @media (max-width: 768px)
-            //    background-color: $dark !important
-            //    color: white !important
-            //    &:hover
-            //       background-color: transparent !important
-            //       color: $dark !important
+
 
       .related
          background-color: white

@@ -24,11 +24,11 @@ the_content();
 if (get_the_ID() === 245):
 
 	function loggedIn() {
-		echo 'width: 600px; margin: 0 auto';
+		echo 'loggedIn';
 	}
 
 	function loggedOut() {
-		echo 'width: 60%; margin: 0 auto';
+		echo 'loggedOut';
 	}
 	
 ?>
@@ -37,7 +37,7 @@ if (get_the_ID() === 245):
 	<div class="wholesale-container">
 		<?php endif; ?>
 
-		<section class="wholesale" style="<?php is_user_logged_in() ? loggedIn() :  loggedOut(); ?>">
+		<section class="wholesale <?php is_user_logged_in() ? loggedIn() :  loggedOut(); ?>">
 			<p>Store owners can take advantage of our wholesale discounts! Please fill out the information below to apply and we’ll get back with you as soon as possible.</p>
 			<?php echo do_shortcode('[contact-form-7 id="244" title="Wholesaler Application"]'); ?>
 		</section>

@@ -44,7 +44,7 @@ while(have_posts()) {
 					</div>
 					
                <div class="cta">
-						<a href="<?php the_permalink( wc_get_page_id( 'shop' ) ); ?>" class="button home">
+						<a href="<?php the_permalink( wc_get_page_id( 'shop' ) ); ?>" class="button clear">
 							<?php 
 								if (get_field('button_text')) {
 									the_field('button_text');
@@ -135,7 +135,7 @@ while(have_posts()) {
 									echo 'We hope you find your style with <em>Silken Strands</em> clothing.';
 								} ?>
 							</p>
-							<a href="<?php the_permalink( wc_get_page_id( 'shop' ) ); ?>" class="button home"><?php if (get_field('button_text2')) {
+							<a href="<?php the_permalink( wc_get_page_id( 'shop' ) ); ?>" class="button clear"><?php if (get_field('button_text2')) {
 									the_field('button_text2');
 								} else {
 									echo 'SHOP';
@@ -207,6 +207,21 @@ while(have_posts()) {
          </div>
          
       </section>
+
+
+
+
+
+		<section class="care-section">
+			<h2>Care For Your Clothing</h2>
+			<div class="care-copy-box">
+				<div class="care-copy">
+					<?php if (get_field('about_text')) {
+						the_field('care_text');
+						} ?>
+				</div>
+			</div>
+		</section>
 
 
 

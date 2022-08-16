@@ -153,6 +153,7 @@ h5 {
 }
 
 p,
+li,
 td,
 th,
 address {
@@ -162,6 +163,7 @@ address {
 
 @media (max-width: 1300px) {
   p,
+  li,
   td,
   th,
   address {
@@ -170,7 +172,7 @@ address {
 }
 
 a {
-  color: #7aebf0;
+  color: #2100a3;
   font-family: 'Montserrat', sans-serif;
   text-decoration: none;
 }
@@ -285,40 +287,44 @@ address {
   }
 }
 
-.button.home, .sbi_load_btn, .woocommerce.post-type-archive-product main ul.products li.product .home.button, .woocommerce.post-type-archive-product main ul.products li.product .sbi_load_btn, .wpforms-container form.wpforms-form .home.wpforms-submit {
+.button.clear, .sbi_load_btn, .woocommerce-button,
+.woocommerce #respond input#submit, .woocommerce a.button, .woocommerce.post-type-archive-product main ul.products li.product a.button, .woocommerce .wpforms-container form.wpforms-form a.wpforms-submit, .wpforms-container form.wpforms-form .woocommerce a.wpforms-submit, .woocommerce button.button, .woocommerce.post-type-archive-product main ul.products li.product button.button, .woocommerce .wpforms-container form.wpforms-form button.wpforms-submit, .wpforms-container form.wpforms-form .woocommerce button.wpforms-submit, .woocommerce input.button, .woocommerce.post-type-archive-product main ul.products li.product input.button, .woocommerce .wpforms-container form.wpforms-form input.wpforms-submit, .wpforms-container form.wpforms-form .woocommerce input.wpforms-submit, .woocommerce.post-type-archive-product main ul.products li.product .clear.button, .woocommerce.post-type-archive-product main ul.products li.product .sbi_load_btn, .woocommerce.post-type-archive-product main ul.products li.product .woocommerce-button, .woocommerce.post-type-archive-product main ul.products li.product .wpforms-container form.wpforms-form a.wpforms-submit, .woocommerce.post-type-archive-product .wpforms-container form.wpforms-form main ul.products li.product a.wpforms-submit, .wpforms-container form.wpforms-form .woocommerce.post-type-archive-product main ul.products li.product a.wpforms-submit, .woocommerce.post-type-archive-product main ul.products li.product .wpforms-container form.wpforms-form button.wpforms-submit, .woocommerce.post-type-archive-product .wpforms-container form.wpforms-form main ul.products li.product button.wpforms-submit, .wpforms-container form.wpforms-form .woocommerce.post-type-archive-product main ul.products li.product button.wpforms-submit, .woocommerce.post-type-archive-product main ul.products li.product .wpforms-container form.wpforms-form input.wpforms-submit, .woocommerce.post-type-archive-product .wpforms-container form.wpforms-form main ul.products li.product input.wpforms-submit, .wpforms-container form.wpforms-form .woocommerce.post-type-archive-product main ul.products li.product input.wpforms-submit, .wpforms-container form.wpforms-form .clear.wpforms-submit {
+  background-color: transparent !important;
+  color: #444 !important;
+}
+
+.button.clear:hover, .sbi_load_btn:hover, .woocommerce-button:hover,
+.woocommerce #respond input#submit:hover, .woocommerce a.button:hover, .woocommerce.post-type-archive-product main ul.products li.product a.button:hover, .woocommerce .wpforms-container form.wpforms-form a.wpforms-submit:hover, .wpforms-container form.wpforms-form .woocommerce a.wpforms-submit:hover, .woocommerce button.button:hover, .woocommerce.post-type-archive-product main ul.products li.product button.button:hover, .woocommerce .wpforms-container form.wpforms-form button.wpforms-submit:hover, .wpforms-container form.wpforms-form .woocommerce button.wpforms-submit:hover, .woocommerce input.button:hover, .woocommerce.post-type-archive-product main ul.products li.product input.button:hover, .woocommerce .wpforms-container form.wpforms-form input.wpforms-submit:hover, .wpforms-container form.wpforms-form .woocommerce input.wpforms-submit:hover, .woocommerce.post-type-archive-product main ul.products li.product .clear.button:hover, .woocommerce.post-type-archive-product main ul.products li.product .sbi_load_btn:hover, .woocommerce.post-type-archive-product main ul.products li.product .woocommerce-button:hover, .woocommerce.post-type-archive-product main ul.products li.product .wpforms-container form.wpforms-form a.wpforms-submit:hover, .woocommerce.post-type-archive-product .wpforms-container form.wpforms-form main ul.products li.product a.wpforms-submit:hover, .wpforms-container form.wpforms-form .woocommerce.post-type-archive-product main ul.products li.product a.wpforms-submit:hover, .woocommerce.post-type-archive-product main ul.products li.product .wpforms-container form.wpforms-form button.wpforms-submit:hover, .woocommerce.post-type-archive-product .wpforms-container form.wpforms-form main ul.products li.product button.wpforms-submit:hover, .wpforms-container form.wpforms-form .woocommerce.post-type-archive-product main ul.products li.product button.wpforms-submit:hover, .woocommerce.post-type-archive-product main ul.products li.product .wpforms-container form.wpforms-form input.wpforms-submit:hover, .woocommerce.post-type-archive-product .wpforms-container form.wpforms-form main ul.products li.product input.wpforms-submit:hover, .wpforms-container form.wpforms-form .woocommerce.post-type-archive-product main ul.products li.product input.wpforms-submit:hover, .wpforms-container form.wpforms-form .clear.wpforms-submit:hover {
+  background-color: #444 !important;
+  color: white !important;
+}
+
+.button.dark, .woocommerce.post-type-archive-product main ul.products li.product .dark.button, .wpforms-container form.wpforms-form .dark.wpforms-submit {
+  background-color: #444 !important;
+  color: white !important;
+}
+
+.button.dark:hover, .woocommerce.post-type-archive-product main ul.products li.product .dark.button:hover, .wpforms-container form.wpforms-form .dark.wpforms-submit:hover {
+  background-color: transparent !important;
+  color: #444 !important;
+}
+
+.button.home, .woocommerce.post-type-archive-product main ul.products li.product .home.button, .wpforms-container form.wpforms-form .home.wpforms-submit {
   background-color: #444 !important;
   border-color: #444 !important;
   color: white !important;
 }
 
-.button.home:hover, .sbi_load_btn:hover, .woocommerce.post-type-archive-product main ul.products li.product .home.button:hover, .woocommerce.post-type-archive-product main ul.products li.product .sbi_load_btn:hover, .wpforms-container form.wpforms-form .home.wpforms-submit:hover {
+.button.home:hover, .woocommerce.post-type-archive-product main ul.products li.product .home.button:hover, .wpforms-container form.wpforms-form .home.wpforms-submit:hover {
   background-color: #eee !important;
   color: black !important;
 }
 
 @media (max-width: 905px) {
-  .button.home, .sbi_load_btn, .woocommerce.post-type-archive-product main ul.products li.product .home.button, .woocommerce.post-type-archive-product main ul.products li.product .sbi_load_btn, .wpforms-container form.wpforms-form .home.wpforms-submit {
+  .button.home, .woocommerce.post-type-archive-product main ul.products li.product .home.button, .wpforms-container form.wpforms-form .home.wpforms-submit {
     background-color: #eee !important;
     color: black !important;
   }
-}
-
-.button.blue, .woocommerce.post-type-archive-product main ul.products li.product .blue.button, .wpforms-container form.wpforms-form .blue.wpforms-submit {
-  background-color: #7aebf0 !important;
-  border-color: #7bc4bb !important;
-}
-
-.button.blue:hover, .woocommerce.post-type-archive-product main ul.products li.product .blue.button:hover, .wpforms-container form.wpforms-form .blue.wpforms-submit:hover {
-  background-color: #7bc4bb !important;
-}
-
-.button.green, .woocommerce.post-type-archive-product main ul.products li.product .green.button, .wpforms-container form.wpforms-form .green.wpforms-submit {
-  background-color: #dfffef !important;
-  border-color: #9cffcd !important;
-}
-
-.button.green:hover, .woocommerce.post-type-archive-product main ul.products li.product .green.button:hover, .wpforms-container form.wpforms-form .green.wpforms-submit:hover {
-  background-color: #9cffcd !important;
 }
 
 .sbi_load_btn {
@@ -328,16 +334,17 @@ address {
 }
 
 .sbi_load_btn span {
-  color: white;
+  color: #444;
   text-transform: uppercase;
 }
 
 .sbi_load_btn:hover {
-  color: #444;
+  -webkit-box-shadow: none !important;
+          box-shadow: none !important;
 }
 
 .sbi_load_btn:hover span {
-  color: #444;
+  color: white;
 }
 
 .sbi_load_btn .sbi_btn_text {
@@ -347,15 +354,7 @@ address {
 
 .woocommerce-button,
 .woocommerce #respond input#submit, .woocommerce a.button, .woocommerce.post-type-archive-product main ul.products li.product a.button, .woocommerce .wpforms-container form.wpforms-form a.wpforms-submit, .wpforms-container form.wpforms-form .woocommerce a.wpforms-submit, .woocommerce button.button, .woocommerce.post-type-archive-product main ul.products li.product button.button, .woocommerce .wpforms-container form.wpforms-form button.wpforms-submit, .wpforms-container form.wpforms-form .woocommerce button.wpforms-submit, .woocommerce input.button, .woocommerce.post-type-archive-product main ul.products li.product input.button, .woocommerce .wpforms-container form.wpforms-form input.wpforms-submit, .wpforms-container form.wpforms-form .woocommerce input.wpforms-submit {
-  background-color: #444 !important;
-  border: 2px solid #444 !important;
   font-weight: bold;
-}
-
-.woocommerce-button:hover,
-.woocommerce #respond input#submit:hover, .woocommerce a.button:hover, .woocommerce.post-type-archive-product main ul.products li.product a.button:hover, .woocommerce .wpforms-container form.wpforms-form a.wpforms-submit:hover, .wpforms-container form.wpforms-form .woocommerce a.wpforms-submit:hover, .woocommerce button.button:hover, .woocommerce.post-type-archive-product main ul.products li.product button.button:hover, .woocommerce .wpforms-container form.wpforms-form button.wpforms-submit:hover, .wpforms-container form.wpforms-form .woocommerce button.wpforms-submit:hover, .woocommerce input.button:hover, .woocommerce.post-type-archive-product main ul.products li.product input.button:hover, .woocommerce .wpforms-container form.wpforms-form input.wpforms-submit:hover, .wpforms-container form.wpforms-form .woocommerce input.wpforms-submit:hover {
-  background-color: #eee !important;
-  color: #444 !important;
 }
 
 .woocommerce table.my_account_orders .button, .woocommerce.post-type-archive-product table.my_account_orders main ul.products li.product .button, .woocommerce.post-type-archive-product main ul.products li.product table.my_account_orders .button, .woocommerce table.my_account_orders .wpforms-container form.wpforms-form .wpforms-submit, .wpforms-container form.wpforms-form .woocommerce table.my_account_orders .wpforms-submit {
@@ -393,6 +392,18 @@ header#silkenstrands-header .logo {
   }
 }
 
+@media (max-width: 900px) {
+  header#silkenstrands-header .logo {
+    left: 16px;
+  }
+}
+
+@media (max-width: 600px) {
+  header#silkenstrands-header .logo {
+    left: 8px;
+  }
+}
+
 header#silkenstrands-header .logo a {
   color: #a5e0fc;
   font-family: 'Snell', cursive;
@@ -415,6 +426,25 @@ header#silkenstrands-header .logo a {
 @media (max-width: 1000px) {
   header#silkenstrands-header .logo a {
     text-shadow: none;
+  }
+}
+
+@media (max-width: 600px) {
+  header#silkenstrands-header .logo a {
+    font-size: 50px;
+  }
+}
+
+@media (max-width: 400px) {
+  header#silkenstrands-header .logo a {
+    font-size: 45px;
+    padding-top: 10px;
+  }
+}
+
+@media (max-width: 350px) {
+  header#silkenstrands-header .logo a {
+    font-size: 40px;
   }
 }
 
@@ -570,7 +600,6 @@ header#silkenstrands-header .logo a {
 
 .desktop-nav .nav-links li a:hover {
   background-color: #eee;
-  border-top: 4px solid #444;
   color: #444;
   padding-top: 30px;
 }
@@ -602,13 +631,17 @@ header#silkenstrands-header .logo a {
 }
 
 .mobile-nav {
-  background-color: #444;
   display: none;
-  height: 100vh;
-  width: 300px;
-  right: 0;
-  position: fixed;
+  height: 50px;
+  width: 100%;
+  left: 0;
   top: 0;
+}
+
+@media (max-width: 768px) {
+  .mobile-nav {
+    display: block;
+  }
 }
 
 .mobile-nav .nav-toggle {
@@ -623,16 +656,20 @@ header#silkenstrands-header .logo a {
   transition: all .25s ease-in;
 }
 
-.mobile-nav .nav-toggle .svg-burger .hidden {
-  display: none;
-}
-
 .mobile-nav .nav-toggle .svg-close {
   display: none;
   position: absolute;
-  top: 0;
+  top: 15px;
+  right: 15px;
   -webkit-transition: all .25s ease-in;
   transition: all .25s ease-in;
+}
+
+@media (max-width: 420px) {
+  .mobile-nav .nav-toggle .svg-close {
+    right: 0px;
+    top: 0px;
+  }
 }
 
 .mobile-nav .nav-toggle .svg-close .show {
@@ -641,23 +678,42 @@ header#silkenstrands-header .logo a {
 }
 
 .mobile-nav .nav-links {
-  padding: 50px 20px;
+  background-color: #444;
+  -webkit-transition: all .25s;
+  transition: all .25s;
+  height: 0;
+  overflow: hidden;
+}
+
+.mobile-nav .nav-links.showing {
+  height: 100vh;
+  padding: 100px 20px;
 }
 
 .mobile-nav .nav-links li {
   display: block;
-  height: 20vh;
   list-style-type: none;
   min-height: 60px;
+  text-align: right;
 }
 
 .mobile-nav .nav-links li a {
   color: #fafafa;
+  display: inline-block;
   font-family: 'Montserrat', sans-serif;
   font-size: 30px;
   font-weight: 300;
+  padding: 20px 10px;
   text-decoration: none;
   text-transform: uppercase;
+  -webkit-transition: all .25s;
+  transition: all .25s;
+  width: 100%;
+}
+
+.mobile-nav .nav-links li a:hover {
+  background-color: #eee;
+  color: #444;
 }
 
 .mobile-nav .mobile-menu-close {
@@ -678,9 +734,15 @@ footer {
   text-align: center;
 }
 
-@media (max-width: 1200px) {
+@media (max-width: 1250px) {
   footer {
     padding: 75px 20px 40px;
+  }
+}
+
+@media (max-width: 1200px) {
+  footer * {
+    text-align: center !important;
   }
 }
 
@@ -808,8 +870,8 @@ footer .middle {
 @media (max-width: 1200px) {
   footer .middle {
     border: 2px solid #444;
-    margin-top: 45px;
-    margin-bottom: 45px;
+    margin-top: 24px;
+    margin-bottom: 24px;
   }
 }
 
@@ -948,7 +1010,7 @@ body.home h2 {
 }
 
 body.home main {
-  padding-top: 80px !important;
+  padding-top: 55px !important;
 }
 
 body.home .hero-section {
@@ -2206,6 +2268,142 @@ body.home .about-section .right .about-copy .signature {
   }
 }
 
+body.home section.care-section {
+  background: #444444;
+  background: linear-gradient(45deg, #444444 0%, #222222 100%);
+  color: #eee;
+  padding: 65px 0;
+  -webkit-transition: all .2s;
+  transition: all .2s;
+}
+
+body.home section.care-section h2 {
+  color: #eee;
+  margin: 0 auto 40px;
+  max-width: 1000px;
+  text-align: center;
+}
+
+body.home section.care-section .care-copy-box {
+  border: 2px solid #eee;
+  -webkit-clip-path: polygon(10% 0, 90% 0, 100% 10%, 100% 90%, 90% 100%, 10% 100%, 0 90%, 0 10%);
+          clip-path: polygon(10% 0, 90% 0, 100% 10%, 100% 90%, 90% 100%, 10% 100%, 0 90%, 0 10%);
+  padding: 0;
+  -webkit-transition: all .3s ease-out;
+  transition: all .3s ease-out;
+  margin: 0 auto;
+  width: 60%;
+}
+
+@media (max-width: 1350px) {
+  body.home section.care-section .care-copy-box {
+    width: 80%;
+  }
+}
+
+@media (max-width: 1100px) {
+  body.home section.care-section .care-copy-box {
+    width: 90%;
+  }
+}
+
+body.home section.care-section .care-copy-box.showing {
+  padding: 25px;
+  -webkit-transform: scale(1.05);
+          transform: scale(1.05);
+}
+
+@media (max-width: 500px) {
+  body.home section.care-section .care-copy-box.showing {
+    padding: 15px;
+  }
+}
+
+body.home section.care-section .care-copy-box .care-copy {
+  background-blend-mode: soft-light;
+  background-color: #efefef;
+  background-image: url("../images/watercolor/blue.jpg");
+  background-size: cover;
+  background-position: bottom;
+  -webkit-box-shadow: inset 0 0 75px #444;
+          box-shadow: inset 0 0 75px #444;
+  -webkit-clip-path: polygon(10% 0, 90% 0, 100% 10%, 100% 90%, 90% 100%, 10% 100%, 0 90%, 0 10%);
+          clip-path: polygon(10% 0, 90% 0, 100% 10%, 100% 90%, 90% 100%, 10% 100%, 0 90%, 0 10%);
+  color: #444;
+  margin: 0 auto;
+  padding: 40px;
+}
+
+@media (max-width: 1200px) {
+  body.home section.care-section .care-copy-box .care-copy {
+    padding: 40px;
+  }
+}
+
+@media (max-width: 1100px) {
+  body.home section.care-section .care-copy-box .care-copy {
+    -webkit-box-shadow: inset 0 0 20px #444;
+            box-shadow: inset 0 0 20px #444;
+    padding: 30px;
+  }
+}
+
+body.home section.care-section .care-copy-box .care-copy ol {
+  list-style: none;
+  counter-reset: my-awesome-counter;
+}
+
+body.home section.care-section .care-copy-box .care-copy li {
+  color: #444;
+  counter-increment: my-awesome-counter;
+  font-size: 19px;
+  margin: 16px auto;
+  max-width: 620px;
+  padding-left: 32px;
+  position: relative;
+  text-align: left;
+}
+
+@media (max-width: 1100px) {
+  body.home section.care-section .care-copy-box .care-copy li {
+    font-size: 17px;
+  }
+}
+
+@media (max-width: 820px) {
+  body.home section.care-section .care-copy-box .care-copy li {
+    font-size: 16px;
+  }
+}
+
+@media (max-width: 500px) {
+  body.home section.care-section .care-copy-box .care-copy li {
+    font-size: 15px;
+  }
+}
+
+body.home section.care-section .care-copy-box .care-copy li::before {
+  background-color: #444;
+  border-radius: 50%;
+  color: white;
+  content: counter(my-awesome-counter);
+  display: inline-block;
+  width: 2rem;
+  height: 2rem;
+  left: -16px;
+  line-height: 2rem;
+  margin-right: 0.5rem;
+  position: absolute;
+  text-align: center;
+}
+
+@media (max-width: 600px) {
+  body.home section.care-section .care-copy-box .care-copy li::before {
+    display: block;
+    position: relative;
+  }
+}
+
 body.home section.instagram {
   background-blend-mode: soft-light;
   background-color: #ddd;
@@ -2223,6 +2421,7 @@ body.home section.instagram .sb_instagram_header {
 
 body.home section.instagram h2.instagram-title {
   font-family: 'Goldoni', serif;
+  text-align: center;
 }
 
 body.home section.instagram #sb_instagram .sbi_follow_btn {
@@ -2307,10 +2506,6 @@ body.home section.instagram #sb_instagram .sbi_photo:hover {
   border-radius: 5px !important;
   cursor: pointer;
   padding: 5px 8px;
-}
-
-.woocommerce.post-type-archive-product main .woocommerce-notices-wrapper {
-  display: none;
 }
 
 .woocommerce.post-type-archive-product main .woo-commerce-result-count,
@@ -2419,11 +2614,8 @@ body.home section.instagram #sb_instagram .sbi_photo:hover {
   display: none;
 }
 
-@media only screen and (max-width: 500px) {
-  .woocommerce ul.products[class*=columns-] li.product, .woocommerce-page ul.products[class*=columns-] li.product {
-    width: 100% !important;
-    clear: none !important;
-  }
+.woocommerce-notices-wrapper {
+  margin-top: 90px;
 }
 
 .single-product .product {
@@ -2593,6 +2785,12 @@ body.home section.instagram #sb_instagram .sbi_photo:hover {
   margin: 4px 16px 0 0 !important;
 }
 
+@media (max-width: 500px) {
+  .single-product .product .summary .quantity {
+    margin-left: 24px !important;
+  }
+}
+
 .single-product .product .summary .quantity input {
   border: 1px solid #177512;
   border-radius: 5px;
@@ -2661,10 +2859,6 @@ body.home section.instagram #sb_instagram .sbi_photo:hover {
   background-color: rgba(255, 255, 255, 0.7);
   max-width: 500px;
   margin: 0 auto 50px !important;
-}
-
-.woocommerce-account .woocommerce-form-login .lost_password a {
-  color: #7aebf0;
 }
 
 .woocommerce-account .woocommerce-form-login .lost_password a:hover {
@@ -2778,7 +2972,11 @@ body.home section.instagram #sb_instagram .sbi_photo:hover {
 }
 
 .woocommerce-account .woocommerce-MyAccount-content {
+  background-color: rgba(255, 255, 255, 0.6);
+  -webkit-box-shadow: 0 0 20px white;
+          box-shadow: 0 0 20px white;
   float: none !important;
+  margin-top: -60px;
   width: 100% !important;
 }
 
@@ -2793,8 +2991,19 @@ body.home section.instagram #sb_instagram .sbi_photo:hover {
 }
 
 .woocommerce-account .woocommerce-MyAccount-content form button[type=submit] {
+  background-color: transparent !important;
+  color: #444 !important;
   margin-top: 20px;
   margin-bottom: 30px;
+}
+
+.woocommerce-account .woocommerce-MyAccount-content form button[type=submit]:hover {
+  background-color: #444 !important;
+  color: white !important;
+}
+
+.woocommerce-account .lost_password a {
+  color: #2100a3;
 }
 
 .woocommerce-MyAccount-navigation ul {
@@ -2808,6 +3017,14 @@ body.home section.instagram #sb_instagram .sbi_photo:hover {
 
 .woocommerce-addresses .woocommerce-Address address {
   text-align: center !important;
+}
+
+.woocommerce-addresses .woocommerce-Address a.edit {
+  color: #0087ff;
+}
+
+.woocommerce-addresses .woocommerce-Address a.edit:hover {
+  color: #0156a2;
 }
 
 @media (max-width: 768px) {
@@ -2850,6 +3067,10 @@ body.home section.instagram #sb_instagram .sbi_photo:hover {
   border-top-color: #0eff00;
   background-color: #444;
   color: white;
+}
+
+.woocommerce-info a {
+  color: #7aebf0;
 }
 
 .wpforms-container form.wpforms-form input {
@@ -2970,6 +3191,14 @@ body.home section.instagram #sb_instagram .sbi_photo:hover {
   margin: 0 auto !important;
 }
 
+.page-id-249 .wholesale.loggedIn {
+  width: 600px;
+}
+
+.page-id-249 .wholesale.loggedOut {
+  width: 60%;
+}
+
 .page-id-249 .wholesale p {
   font-size: 20px;
   text-align: center;
@@ -3016,5 +3245,89 @@ body.home section.instagram #sb_instagram .sbi_photo:hover {
 .page-id-249 .login .woocommerce-form-login__submit:hover {
   background-color: #333;
   color: #eee;
+}
+
+.woocommerce-cart .product-name a {
+  color: #2100a3;
+}
+
+.woocommerce-cart td.actions {
+  padding: 16px;
+}
+
+@media (max-width: 768px) {
+  .woocommerce-cart td.actions .coupon {
+    padding-top: 8px;
+    text-align: center;
+  }
+  .woocommerce-cart td.actions .coupon .input-text,
+  .woocommerce-cart td.actions .coupon button {
+    float: none !important;
+    text-align: center;
+    margin-left: auto !important;
+    margin-right: auto !important;
+  }
+  .woocommerce-cart td.actions .coupon .input-text {
+    margin-bottom: 8px !important;
+  }
+  .woocommerce-cart td.actions .coupon .button:nth-child(1), .woocommerce-cart td.actions .coupon .woocommerce.post-type-archive-product main ul.products li.product .button:nth-child(1), .woocommerce.post-type-archive-product main ul.products li.product .woocommerce-cart td.actions .coupon .button:nth-child(1), .woocommerce-cart td.actions .coupon .wpforms-container form.wpforms-form .wpforms-submit:nth-child(1), .wpforms-container form.wpforms-form .woocommerce-cart td.actions .coupon .wpforms-submit:nth-child(1) {
+    margin: 8px auto !important;
+  }
+  .woocommerce-cart td.actions .coupon .button:nth-child(2), .woocommerce-cart td.actions .coupon .woocommerce.post-type-archive-product main ul.products li.product .button:nth-child(2), .woocommerce.post-type-archive-product main ul.products li.product .woocommerce-cart td.actions .coupon .button:nth-child(2), .woocommerce-cart td.actions .coupon .wpforms-container form.wpforms-form .wpforms-submit:nth-child(2), .wpforms-container form.wpforms-form .woocommerce-cart td.actions .coupon .wpforms-submit:nth-child(2) {
+    margin-top: 16px !important;
+  }
+}
+
+.woocommerce-cart td.actions .coupon input {
+  width: 125px !important;
+}
+
+.woocommerce-cart td.actions .coupon .button, .woocommerce-cart td.actions .coupon .woocommerce.post-type-archive-product main ul.products li.product .button, .woocommerce.post-type-archive-product main ul.products li.product .woocommerce-cart td.actions .coupon .button, .woocommerce-cart td.actions .coupon .wpforms-container form.wpforms-form .wpforms-submit, .wpforms-container form.wpforms-form .woocommerce-cart td.actions .coupon .wpforms-submit {
+  margin-left: 16px;
+  width: auto !important;
+}
+
+.woocommerce-cart .wc-proceed-to-checkout {
+  line-height: 1.25em;
+  margin: 0 auto;
+  width: 300px;
+}
+
+@media (max-width: 600px) {
+  .woocommerce-cart .wc-proceed-to-checkout {
+    font-size: 1em;
+    width: 250px;
+  }
+}
+
+.woocommerce-cart .woocommerce-shipping-calculator .shipping-calculator-button {
+  color: #2100a3;
+}
+
+.woocommerce-cart .woocommerce-shipping-calculator .select2-selection,
+.woocommerce-cart .woocommerce-shipping-calculator .select2-dropdown {
+  border-color: #177512 !important;
+}
+
+.woocommerce-cart .woocommerce-shipping-calculator .select2-selection {
+  height: 32px;
+}
+
+@media (max-width: 600px) {
+  .woocommerce-cart .woocommerce-message {
+    padding: 10px 0 0 45px;
+  }
+}
+
+.woocommerce-cart .woocommerce-message::before {
+  left: 5px;
+}
+
+@media (max-width: 768px) {
+  .woocommerce-checkout #ship-to-different-address span {
+    display: inline-block;
+    font-size: 24px;
+    margin-bottom: 16px;
+  }
 }
 /*# sourceMappingURL=main.css.map */

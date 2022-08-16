@@ -157,7 +157,6 @@ do_action( 'woocommerce_before_cart' ); ?>
 		</tbody>
 	</table>
 
-   testing cart page
 	<?php do_action( 'woocommerce_after_cart_table' ); ?>
 </form>
 

@@ -13,14 +13,27 @@
    transition: all .25s ease-in
    &:hover
       background-color: $button !important
-      // clip-path: polygon(10% 0%, 90% 0%, 100% 10%, 100% 90%, 90% 100%, 10% 100%, 0% 90%, 0% 10%)
-      // color: $light !important
    @media (max-width: 1075px)
       font-size: 18px
       padding: 10px 20px
    @media (max-width: 460px)
       font-size: 15px
       padding: 8px 16px
+
+
+.button.clear
+   background-color: transparent !important
+   color: $dark !important
+   &:hover
+      background-color: $dark !important
+      color: white !important
+
+.button.dark
+   background-color: $dark !important
+   color: white !important
+   &:hover
+      background-color: transparent !important
+      color: $dark !important
 
 .button.home
    background-color: $homeButton !important
@@ -33,32 +46,20 @@
       background-color: $homeButtonHover !important
       color: black !important
 
-.button.blue
-   background-color: $blueButton !important
-   border-color: $blueButtonHover !important
-   &:hover
-      background-color: $blueButtonHover !important
-
-.button.green
-   background-color: $greenButton !important
-   border-color: $greenButtonHover !important
-   &:hover
-      background-color: $greenButtonHover !important
-
 
 
 
 .sbi_load_btn
-   @extend .button.home
+   @extend .button.clear
    border: 2px solid $dark !important
    clip-path: polygon(10% 0%, 90% 0%, 100% 10%, 100% 90%, 90% 100%, 10% 100%, 0% 90%, 0% 10%)
    span
-      color: white
+      color: $dark
       text-transform: uppercase
    &:hover
-      color: $dark
+      box-shadow: none !important
       span
-         color: $dark 
+         color: white
 
    .sbi_btn_text
       font-family: 'Montserrat', sans-serif
@@ -67,12 +68,8 @@
 
 .woocommerce-button,
 .woocommerce #respond input#submit, .woocommerce a.button, .woocommerce button.button, .woocommerce input.button
-   background-color: $homeButton !important
-   border: 2px solid $homeButton !important
+   @extend .button.clear
    font-weight: bold
-   &:hover
-      background-color: $homeButtonHover !important
-      color: $dark !important
 
 .woocommerce table.my_account_orders .button
    margin-right: 15px

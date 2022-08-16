@@ -5,7 +5,7 @@
       margin: 0 auto 50px !important
 
       .lost_password a
-         color: $links
+         // color: $links
 
          &:hover
             color: darken($links, 15%)
@@ -81,7 +81,10 @@
    
 .woocommerce-account
    .woocommerce-MyAccount-content
+      background-color: rgba(255, 255, 255, .6)
+      box-shadow: 0 0 20px white
       float: none !important
+      margin-top: -60px
       width: 100% !important
 
       h3
@@ -93,8 +96,17 @@
          margin-bottom: 35px
 
          button[type=submit]
+            background-color: transparent !important
+            color: $dark !important
             margin-top: 20px
             margin-bottom: 30px
+            &:hover
+               background-color: $dark !important
+               color: white !important
+            
+   .lost_password
+      a
+         color: #2100a3
 
 .woocommerce-MyAccount-navigation
    ul
@@ -107,6 +119,10 @@
    .woocommerce-Address
       address
          text-align: center !important
+      a.edit
+         color: #0087ff
+         &:hover
+            color: #0156a2
 
 .woocommerce .col2-set .col-1, .woocommerce .col2-set .col-2, .woocommerce-page .col2-set .col-1, .woocommerce-page .col2-set .col-2
    @media (max-width: 768px)
@@ -144,3 +160,6 @@
    border-top-color: $brightGreen
    background-color: #444
    color: white
+
+   a
+      color: $links

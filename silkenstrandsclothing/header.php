@@ -33,7 +33,7 @@
       <header id="silkenstrands-header">
          <?php if (!is_front_page()): ?>
             <div class="logo">
-               <a href="/">Silken Strands</a>
+               <a href="<?php echo esc_url(get_template_directory_uri()); ?>">Silken Strands</a>
             </div>
          <?php endif; ?>
 
@@ -100,13 +100,13 @@
 
          <nav class="mobile-nav open-menu">
             <div class="nav-toggle">
-               <svg class="svg-burger" viewBox="0 0 60 60" width="60" height="60">
+               <svg class="svg-burger" viewBox="0 0 60 60" width="35" height="35">
                   <rect width="60" height="7" fill="#ccc"></rect>
                   <rect y="20" width="60" height="7" fill="#ccc"></rect>
                   <rect y="40" width="60" height="7" fill="#ccc"></rect>
                </svg>
                <br/>
-               <svg class="svg-close" viewBox="0 0 60 60" width="60" height="60">
+               <svg class="svg-close" viewBox="0 0 60 60" width="35" height="35">
                   <line x1="0" y1="60" x2="60" y2="0" stroke-width="7" stroke="#ccc" />
                   <line x1="0" y1="0" x2="60" y2="60" stroke-width="7" stroke="#ccc" />
                </svg>

@@ -263,6 +263,14 @@ jQuery('document').ready(function () {
       }, 500)
   }, {offset: '70%'})
 
+  jQuery('.care-section .care-copy-box').waypoint(function(direction){
+    if (direction === 'down') {
+      jQuery('.care-section .care-copy-box').addClass('showing');
+    } else {
+      jQuery('.care-section .care-copy-box').removeClass('showing');
+    }
+  }, {offset: '70%'})
+
 
 
 }); // . /ready

@@ -1,0 +1,65 @@
+.woocommerce-cart
+   
+   .product-name
+      a
+         color: #2100a3
+
+   td.actions
+      padding: 16px
+
+      .coupon
+         @media (max-width: 768px)
+            padding-top: 8px
+            text-align: center
+            .input-text,
+            button
+               float: none !important
+               text-align: center
+               margin-left: auto !important
+               margin-right: auto !important
+
+            .input-text
+               margin-bottom: 8px !important
+
+            .button:nth-child(1)
+               margin: 8px auto !important
+
+            .button:nth-child(2)
+               margin-top: 16px !important
+
+         input
+            width: 125px !important
+         .button
+            margin-left: 16px
+            width: auto !important
+
+   .wc-proceed-to-checkout
+      line-height: 1.25em
+      margin: 0 auto
+      width: 300px
+      @media (max-width: 600px)
+         font-size: 1em
+         width: 250px
+
+   .woocommerce-shipping-calculator
+      .shipping-calculator-button
+         color: #2100a3
+      .select2-selection,
+      .select2-dropdown
+         border-color: #177512 !important
+      .select2-selection
+         height: 32px
+     
+   .woocommerce-message
+      @media (max-width: 600px)
+         padding: 10px 0 0 45px
+   .woocommerce-message::before
+      left: 5px
+
+
+.woocommerce-checkout
+   #ship-to-different-address span
+      @media (max-width: 768px)
+         display: inline-block
+         font-size: 24px
+         margin-bottom: 16px

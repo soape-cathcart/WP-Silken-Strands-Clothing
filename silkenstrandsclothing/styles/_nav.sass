@@ -20,6 +20,10 @@ header#silkenstrands-header
       top: -20px
       @media (max-width: 1100px)
          top: 0
+      @media (max-width: 900px)
+         left: 16px         
+      @media (max-width: 600px)
+         left: 8px         
 
       a
          color: $banner
@@ -32,6 +36,13 @@ header#silkenstrands-header
             font-size: 60px
          @media (max-width: 1000px)
             text-shadow: none
+         @media (max-width: 600px)
+            font-size: 50px
+         @media (max-width: 400px)
+            font-size: 45px
+            padding-top: 10px
+         @media (max-width: 350px)
+            font-size: 40px
    
 .banner-nav
    background-color: $banner1
@@ -135,7 +146,6 @@ header#silkenstrands-header
 
             &:hover
                background-color: $light
-               border-top: 4px solid $dark
                color: $dark
                padding-top: 30px
 
@@ -170,15 +180,13 @@ header#silkenstrands-header
 // ***     MOBILE NAV      ***
 
 .mobile-nav
-   background-color: $dark
    display: none
-   height: 100vh
-   width: 300px
-   right: 0
-   position: fixed
+   height: 50px
+   width: 100%
+   left: 0
    top: 0
-   // @media (max-width: 1000px)
-      // display: block
+   @media (max-width: 768px)
+      display: block
 
    .nav-toggle
       cursor: pointer
@@ -188,36 +196,50 @@ header#silkenstrands-header
 
       .svg-burger
          transition: all .25s ease-in
-         
-         .hidden
-            display: none
 
       .svg-close
          display: none
          position: absolute
-         top: 0
+         top: 15px
+         right: 15px
          transition: all .25s ease-in
+         @media (max-width: 420px)
+            right: 0px
+            top: 0px
 
          .show
             display: block
             opacity: 1
 
    .nav-links
-      padding: 50px 20px
+      background-color: $dark
+      transition: all .25s
+      height: 0
+      overflow: hidden
+      &.showing
+         height: 100vh
+         padding: 100px 20px
 
       li
          display: block
-         height: 20vh
          list-style-type: none
          min-height: 60px
+         text-align: right
 
          a
             color: #fafafa
+            display: inline-block
             font-family: 'Montserrat', sans-serif
             font-size: 30px
             font-weight: 300
+            padding: 20px 10px
             text-decoration: none
             text-transform: uppercase
+            transition: all .25s
+            width: 100%
+            &:hover
+               background-color: $light
+               color: $dark
 
    .mobile-menu-close
       display: none
