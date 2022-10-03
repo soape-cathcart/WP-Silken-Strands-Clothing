@@ -213,7 +213,7 @@ while(have_posts()) {
 
 
 		<section class="care-section">
-			<h2>Care For Your Clothing</h2>
+			<h2 class="care-title">Care For Your Clothing</h2>
 			<div class="care-copy-box">
 				<div class="care-copy">
 					<?php if (get_field('about_text')) {

@@ -2277,11 +2277,17 @@ body.home section.care-section {
   transition: all .2s;
 }
 
-body.home section.care-section h2 {
+body.home section.care-section h2.care-title {
   color: #eee;
   margin: 0 auto 40px;
   max-width: 1000px;
   text-align: center;
+}
+
+@media (max-width: 500px) {
+  body.home section.care-section h2.care-title {
+    font-size: 32px;
+  }
 }
 
 body.home section.care-section .care-copy-box {
@@ -2304,6 +2310,13 @@ body.home section.care-section .care-copy-box {
 @media (max-width: 1100px) {
   body.home section.care-section .care-copy-box {
     width: 90%;
+  }
+}
+
+@media (max-width: 400px) {
+  body.home section.care-section .care-copy-box {
+    -webkit-clip-path: polygon(10% 0, 95% 0, 100% 5%, 100% 95%, 95% 100%, 5% 100%, 0 95%, 0 5%);
+            clip-path: polygon(10% 0, 95% 0, 100% 5%, 100% 95%, 95% 100%, 5% 100%, 0 95%, 0 5%);
   }
 }
 
@@ -2348,9 +2361,17 @@ body.home section.care-section .care-copy-box .care-copy {
   }
 }
 
+@media (max-width: 400px) {
+  body.home section.care-section .care-copy-box .care-copy {
+    -webkit-clip-path: polygon(10% 0, 95% 0, 100% 5%, 100% 95%, 95% 100%, 5% 100%, 0 95%, 0 5%);
+            clip-path: polygon(10% 0, 95% 0, 100% 5%, 100% 95%, 95% 100%, 5% 100%, 0 95%, 0 5%);
+  }
+}
+
 body.home section.care-section .care-copy-box .care-copy ol {
   list-style: none;
   counter-reset: my-awesome-counter;
+  padding-left: 32px;
 }
 
 body.home section.care-section .care-copy-box .care-copy li {
@@ -2376,22 +2397,27 @@ body.home section.care-section .care-copy-box .care-copy li {
   }
 }
 
-@media (max-width: 500px) {
+@media (max-width: 600px) {
   body.home section.care-section .care-copy-box .care-copy li {
     font-size: 15px;
+    padding-left: 10px;
+  }
+}
+
+@media (max-width: 400px) {
+  body.home section.care-section .care-copy-box .care-copy li {
+    padding-left: 0;
+    padding-left: 8px;
   }
 }
 
 body.home section.care-section .care-copy-box .care-copy li::before {
-  background-color: #444;
-  border-radius: 50%;
-  color: white;
+  color: rgba(0, 0, 0, 0.1);
   content: counter(my-awesome-counter);
   display: inline-block;
-  width: 2rem;
-  height: 2rem;
   left: -16px;
   line-height: 2rem;
+  font-size: 60px;
   margin-right: 0.5rem;
   position: absolute;
   text-align: center;
@@ -2399,8 +2425,14 @@ body.home section.care-section .care-copy-box .care-copy li::before {
 
 @media (max-width: 600px) {
   body.home section.care-section .care-copy-box .care-copy li::before {
-    display: block;
-    position: relative;
+    line-height: 5rem;
+    left: -32px;
+  }
+}
+
+@media (max-width: 400px) {
+  body.home section.care-section .care-copy-box .care-copy li::before {
+    left: -50px;
   }
 }
 
@@ -2519,7 +2551,6 @@ body.home section.instagram #sb_instagram .sbi_photo:hover {
   background-color: white;
   max-width: 1200px;
   margin: 0 auto;
-  padding: 40px;
 }
 
 .woocommerce.post-type-archive-product main ul.products {
