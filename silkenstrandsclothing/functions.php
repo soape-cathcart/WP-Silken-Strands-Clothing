@@ -177,12 +177,12 @@ add_action( 'wp', 'remove_image_zoom_support', 100 );
 
 
   // Remove Country field from WooCommerce checkout
-  function custom_override_checkout_fields( $fields )    
-    {
-    unset($fields['billing']['billing_country']);
-    return $fields;
-    }
-    add_filter('woocommerce_checkout_fields','custom_override_checkout_fields');
+  // function custom_override_checkout_fields( $fields )    
+  //   {
+  //   unset($fields['billing']['billing_country']);
+  //   return $fields;
+  //   }
+  //   add_filter('woocommerce_checkout_fields','custom_override_checkout_fields');
 
 
 

@@ -107,11 +107,25 @@ while(have_posts()) {
 				<div class="right">
 
 					<div class="slider">
-						<a href="#"><img src="<?php echo get_template_directory_uri(); ?>/images/png/1-Maggie.png"></a>
-						<a href="#"><img src="<?php echo get_template_directory_uri(); ?>/images/png/2-Misha.png"></a>
-						<a href="#"><img src="<?php echo get_template_directory_uri(); ?>/images/png/3-Tara.png"></a>
-					</div>
+						<?php 
+							if( have_rows('showcase') ):
 
+								// Loop through rows.
+								while( have_rows('showcase') ) : the_row();
+									 $img = get_sub_field('showcase_image');
+									 $link = get_sub_field('showcase_link');
+									 ?>
+								
+									<a href="<?php echo $link; ?>">
+										<img src="<?php echo $img; ?>">
+									</a>
+
+						<?php
+								endwhile;
+							endif;
+						?>
+						
+					</div>
 				</div>
 
             <div class="left">
